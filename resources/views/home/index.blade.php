@@ -2,7 +2,7 @@
     <x-shop.hero image="{{ asset('logos/hero.svg') }}">
         <x-slot name="action">
             <livewire:component.signup-modal
-                name="Register Early Access Now"
+                action-name="Register Early Access Now"
                 subtext="Sign up for early access when we launch."/>
         </x-slot>
         <h1 class="text-2xl md:text-4xl text-white mb-6 font-titleFont">Success starts with a click.</h1>

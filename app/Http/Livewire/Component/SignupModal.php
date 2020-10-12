@@ -7,8 +7,11 @@ use Illuminate\Contracts\Support\Renderable;
 
 class SignupModal extends Component
 {
-    public string $name = '';
+    public string $name;
+    public string $actionName;
     public string $subtext = '';
+    public string $business = '';
+    public string $phone = '';
 
     public function render(): Renderable
     {

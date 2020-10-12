@@ -24,7 +24,6 @@ use App\Http\Controllers\Store\Admin\Auth\LogoutController;
 
 //Base Domain Routes
 Route::domain(config('services.domain.base'))->group(function () {
-
     // Home
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('shops', [HomeController::class, 'shops'])->name('shops');
@@ -49,10 +48,8 @@ Route::domain('seller.' . config('services.domain.base'))->name('seller.')->grou
 
 // Store Specific Routes
 Route::domain('{store}.' . config('services.domain.base'))->name('store.')->group(function () {
-
     //Store Home
     Route::get('/', [StoreController::class, 'show'])->name('home');
-
     //Store Dashboard
     Route::prefix('admin')->middleware(['auth:store', 'store.owner'])->name('admin.')->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');

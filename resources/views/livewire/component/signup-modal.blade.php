@@ -2,7 +2,7 @@
     <p class="text-gray-200 text-xs mb-2">{{ $subtext }}</p>
     <button type="button" x-on:click="modal = true"
             class="py-3 w-full bg-gradient-to-r from-gray-100 to-gray-100 hover:from-indigo-600 hover:to-blue-500 text-blue-700 hover:text-white max-w-full md:max-w-sm rounded-md shadow-md text-center transition ease-in-out duration-150">
-        {{ $name }}
+        {{ $actionName }}
     </button>
     <div x-show.transition.opacity="modal"
          class="px-0 pb-0 md:pb-0 md:px-0 fixed top-0 inset-0 z-30 w-screen h-screen overlay"
