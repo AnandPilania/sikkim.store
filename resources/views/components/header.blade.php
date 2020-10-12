@@ -43,7 +43,7 @@
                     </button>
                 </div>
                 <div class="flex-1 flex items-stretch sm:items-stretch sm:justify-start">
-                    <a href="{{ '' }}"
+                    <a href="{{ route('home') }}"
                        class="flex items-center justify-between">
                         <div class="flex-shrink-0 mr-2 ml-10 md:ml-0">
                             <img src="{{ asset('sikkimstore.png') }}" class="hidden sm:block h-7" alt="">
