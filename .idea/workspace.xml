@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6af6968e-fdb9-415c-a07b-b52e790cd760" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Component/SignupModal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Component/SignupModal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/component/signup-modal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/component/signup-modal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/auth.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/auth.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/store.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/store.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/store/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/store/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/user/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/user/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/user/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/user/auth/register.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +238,7 @@
       <workItem from="1602351694465" duration="335000" />
       <workItem from="1602398629617" duration="25969000" />
       <workItem from="1602473490183" duration="12795000" />
-      <workItem from="1602486940608" duration="1360000" />
+      <workItem from="1602486940608" duration="2132000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1602487821446</created>
@@ -245,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602487821446</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <created>1602488872488</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602488872488</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,10 +281,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="594" y="377" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1680.1050@0.0.1680.1050" timestamp="1602475795996" />
-    <state x="423" y="87" key="CommitChangelistDialog2" timestamp="1602487821236">
+    <state x="423" y="87" key="CommitChangelistDialog2" timestamp="1602488872366">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="423" y="87" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1602487821236" />
+    <state x="423" y="87" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1602488872366" />
     <state x="577" y="444" key="ComposerInitDialogKey" timestamp="1601807547072">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

@@ -1,16 +1,16 @@
 <div>
     <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-    <div class="absolute inset-0 bg-gradient-to-r from-teal-400 to-blue-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-    <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+    <div class="absolute inset-0 bg-gradient-to-r from-teal-400 to-blue-400 md:shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+    <div class="relative px-4 py-10 bg-white md:shadow-lg sm:rounded-3xl sm:p-20">
         <div class="sm:mx-auto sm:w-full sm:max-w-md">
-            <div class="px-4 py-8 bg-white shadow-md sm:rounded-lg sm:px-10">
+            <div class="px-4 py-8 bg-white md:shadow-md sm:rounded-lg sm:px-10">
 
                 <div class="mb-5 flex flex-col items-center justify-center">
                     <a href="{{ route('home') }}" class="inline-block">
                         <x-logo class="w-auto h-16 text-green-600"/>
                     </a>
                     <h2 class="text-sm font-semibold text-center text-gray-900 leading-9">
-                        Create a new account
+                        Register new store
                     </h2>
                 </div>
 

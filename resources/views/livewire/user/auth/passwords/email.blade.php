@@ -1,7 +1,7 @@
 <x-slot name="title">Reset password</x-slot>
 <div>
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
-        <div class="px-4 py-8 bg-white shadow sm:rounded-lg sm:px-10">
+        <div class="px-4 py-8 bg-white md:shadow sm:rounded-lg sm:px-10">
 
             <div class="mb-5 flex flex-col items-center justify-center">
                 <a href="{{ route('home') }}" class="inline-block">

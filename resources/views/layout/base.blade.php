@@ -23,7 +23,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
 
-    <body class="font-body bg-gray-200">
+    <body class="font-body">
 
         {{ $slot }}
 
