@@ -4,7 +4,11 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6af6968e-fdb9-415c-a07b-b52e790cd760" name="Default Changelist" comment="" />
+    <list default="true" id="6af6968e-fdb9-415c-a07b-b52e790cd760" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +19,9 @@
     <execution>
       <executable path="composer" />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupnpm">
@@ -140,7 +147,9 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Blade&#10;PHP" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
@@ -224,7 +233,8 @@
       <workItem from="1602312700093" duration="12542000" />
       <workItem from="1602351694465" duration="335000" />
       <workItem from="1602398629617" duration="25969000" />
-      <workItem from="1602473490183" duration="12632000" />
+      <workItem from="1602473490183" duration="12795000" />
+      <workItem from="1602486940608" duration="617000" />
     </task>
     <servers />
   </component>
@@ -248,6 +258,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="594" y="377" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1680.1050@0.0.1680.1050" timestamp="1602475795996" />
+    <state x="423" y="87" key="CommitChangelistDialog2" timestamp="1602487016759">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="423" y="87" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1602487016759" />
     <state x="577" y="444" key="ComposerInitDialogKey" timestamp="1601807547072">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -304,10 +318,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="505" y="248" width="670" height="675" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1601810279691" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1602476032249">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1602487423048">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1602476032249" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1602487423048" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1602406552354" />
   </component>
 </project>

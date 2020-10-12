@@ -31,7 +31,7 @@ return [
     ],
 
     'domain' => [
-        'base' => env('SITE_URL', 'preset-stub.test'),
+        'base' => env('SITE_URL'),
     ]
 
 ];
