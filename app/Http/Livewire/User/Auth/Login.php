@@ -16,6 +16,7 @@ class Login extends Component
 
     public function authenticate()
     {
+//        sleep(5);
         $this->validate();
         if (!Auth::guard('user')->attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
             $this->addError('email', trans('auth.failed'));

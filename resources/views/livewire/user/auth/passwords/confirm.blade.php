@@ -2,7 +2,6 @@
 <div>
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
         <div class="px-4 py-8 bg-white shadow sm:rounded-lg sm:px-10">
-
             <div class="mb-5 flex flex-col items-center justify-center">
                 <h2 class="text-sm font-semibold text-center text-gray-900 leading-9">
                     Password Confirm

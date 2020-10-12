@@ -167,6 +167,6 @@
                    class="block pt-3 pb-3 pl-6 text-xm text-sm font-medium focus:outline-none focus:text-white bg-gradient-to-r @if(request()->routeIs('help')) text-white from-teal-400 to-blue-500 font-medium @else text-gray-700 from-white to-white @endif from-white to-white focus:from-teal-500 focus:to-blue-500 transition duration-150 ease-in-out">Help</a>
             </div>
         </div>
-        <div class="absolute bottom-0 -mb-1 inset-x-0 bg-gradient-to-tr from-teal-500 to to-blue-500 h-1"></div>
+        <div class="absolute bottom-0 -mb-1 inset-x-0 bg-gradient-to-tr from-teal-500 to to-blue-500 h-0.5 md:h-1"></div>
     </nav>
 </header>

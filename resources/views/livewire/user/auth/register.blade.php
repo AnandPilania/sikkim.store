@@ -3,9 +3,6 @@
         <div class="px-4 py-8 bg-white md:shadow sm:rounded-lg sm:px-10">
 
             <div class="mb-5 flex flex-col items-center justify-center">
-                <a href="{{ route('home') }}" class="inline-block">
-                    <x-logo class="w-auto h-16 text-green-600"/>
-                </a>
                 <h2 class="text-sm font-semibold text-center text-gray-900 leading-9">
                     Create a new account
                 </h2>

@@ -5,7 +5,6 @@ namespace App\Http\Livewire\User\Auth;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use App\Jobs\SendVerificationEmailJob;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Contracts\Support\Renderable;
 
 class Verify extends Component
@@ -13,7 +12,7 @@ class Verify extends Component
     public function resend()
     {
         if (Auth::user()->hasVerifiedEmail()) {
-            return redirect(RouteServiceProvider::HOME);
+            return redirect(route('home'));
         }
         SendVerificationEmailJob::dispatch(auth()->user());
         $this->emit('resent');

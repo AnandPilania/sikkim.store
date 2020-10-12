@@ -3,9 +3,6 @@
         <div class="px-4 py-8 bg-white md:shadow sm:rounded-lg sm:px-10">
 
             <div class="mb-5 flex flex-col items-center justify-center">
-                <a href="{{ route('home') }}" class="inline-block">
-                    <x-logo class="w-auto h-16 text-green-600"/>
-                </a>
                 <h2 class="text-sm font-semibold text-center text-gray-900 leading-9">
                     Sign in to your account.
                 </h2>
@@ -80,12 +77,26 @@
                 </div>
 
                 <div class="mt-6">
-                        <span class="block w-full rounded-md shadow-sm">
-                            <button type="submit"
-                                    class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-md hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out">
-                                Sign in
-                            </button>
-                        </span>
+                    <span class="block w-full rounded-md shadow-sm">
+                        <button type="submit" wire:loading.remove.delay wire:target="authenticate"
+                                class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-md hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out">
+                            Sign in
+                        </button>
+                        <div wire:loading.delay wire:target="authenticate"
+                             class="w-full px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md bg-green-500 cursor-wait ">
+                            <div class="flex items-center justify-center">
+                                <svg class="animate-spin mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="#ffffff"
+                                            stroke-width="3px" fill="none"></circle>
+                                    <path class="opacity-75" fill="#ffffff"
+                                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                <div>
+                                    <p>Please wait.... </p>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
                 </div>
             </form>
             <div class="mt-6 text-center">
