@@ -217,7 +217,7 @@
 
     <section class="bg-white">
         <div class="max-w-7xl mx-auto px-8 py-16">
-            <div class="p-4 text-lg sticky top-20 z-10 bg-white">
+            <div class="p-4 text-lg sticky top-20 z-0 bg-white">
                     Featured Products
             </div>
             <div class="products">
@@ -245,7 +245,7 @@
 
     <section class="bg-gray-100">
         <div class="max-w-7xl mx-auto px-8 py-16">
-            <div class="p-4 text-lg sticky top-20 z-10 bg-gray-100">
+            <div class="p-4 text-lg sticky top-20 z-0 bg-gray-100">
                 Trending Products
             </div>
             <div class="products">
@@ -273,7 +273,7 @@
 
     <section class="bg-white">
         <div class="max-w-7xl mx-auto px-8 py-16">
-            <div class="p-4 text-lg sticky top-20 z-10 bg-white">
+            <div class="p-4 text-lg sticky top-20 z-0 bg-white">
                 Latest Products
             </div>
             <div class="products">
@@ -498,4 +498,12 @@
             </div>
         </div>
     </footer>
+
+    <section class="fixed bottom-20 right-20 flex items-center justify-center z-20">
+        <a href="{{ route('home') }}" class="p-4 bg-gradient-to-tr from-teal-500 to-blue-500 rounded-full text-white shadow-lg transform hover:-translate-y-0.5">
+            <svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+            </svg>
+        </a>
+    </section>
 </x-layout.store>
