@@ -21,8 +21,8 @@
                                     d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
                             </svg>
                             <div
-                                class="absolute top-0 right-0 -mt-4 -mr-4 bg-green-500 text-xxs px-2 py-1 rounded-md text-white">
-                                2
+                                class="absolute top-0 right-0 -mt-4 -mr-4 bg-green-500 text-xxs px-1 py-0.5 rounded-md text-white">
+                                234
                             </div>
                         </div>
                     </button>
@@ -112,7 +112,7 @@
                 </div>
             </div>
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+                <img class="object-cover object-center rounded" alt="hero" src="https://picsum.photos/500?random=10">
             </div>
         </div>
     </section>
@@ -127,97 +127,27 @@
                     man bun deep jianbing selfies heirloom.</p>
             </div>
             <div class="flex flex-wrap -m-4">
+                @foreach($gallery_products as $product)
                 <div class="lg:w-1/3 sm:w-1/2 p-4">
                     <div class="flex relative">
                         <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-                             src="https://dummyimage.com/600x360">
-                        <div
+                             src="https://picsum.photos/200?random={{ $product->uuid }}">
+                        <a href=""
                             class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE
-                                SUBTITLE</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-                                microdosing tousled waistcoat.</p>
-                        </div>
+                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1 uppercase"> {{ $product->category->name }}</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3 truncate-1-lines">{{ $product->name }}</h1>
+                            <p class="leading-relaxed truncate-3-lines">{{ $product->description }}</p>
+                        </a>
                     </div>
                 </div>
-                <div class="lg:w-1/3 sm:w-1/2 p-4">
-                    <div class="flex relative">
-                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-                             src="https://dummyimage.com/601x361">
-                        <div
-                            class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE
-                                SUBTITLE</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
-                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-                                microdosing tousled waistcoat.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/3 sm:w-1/2 p-4">
-                    <div class="flex relative">
-                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-                             src="https://dummyimage.com/603x363">
-                        <div
-                            class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE
-                                SUBTITLE</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-                                microdosing tousled waistcoat.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/3 sm:w-1/2 p-4">
-                    <div class="flex relative">
-                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-                             src="https://dummyimage.com/602x362">
-                        <div
-                            class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE
-                                SUBTITLE</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
-                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-                                microdosing tousled waistcoat.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/3 sm:w-1/2 p-4">
-                    <div class="flex relative">
-                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-                             src="https://dummyimage.com/605x365">
-                        <div
-                            class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE
-                                SUBTITLE</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
-                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-                                microdosing tousled waistcoat.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/3 sm:w-1/2 p-4">
-                    <div class="flex relative">
-                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-                             src="https://dummyimage.com/606x366">
-                        <div
-                            class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE
-                                SUBTITLE</h2>
-                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-                            <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-                                microdosing tousled waistcoat.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
-    </section>
+    </section> {{-- Gallery Top--}}
 
     <section class="bg-white">
         <div class="max-w-7xl mx-auto px-8 py-16">
-            <div class="p-4 text-lg sticky top-20 z-0 bg-white">
+            <div class="p-4 text-lg sticky top-20 z-10 bg-white">
                     Featured Products
             </div>
             <div class="products">
@@ -226,11 +156,11 @@
                         <a href="{{ route('store.products.show',[$store, $product]) }}" class="lg:w-1/4 md:w-1/2 p-4 w-full group">
                             <div class="block relative h-48 rounded overflow-hidden">
                                 <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                                     src="https://dummyimage.com/420x260">
+                                     src="https://picsum.photos/200?random={{ $product->uuid }}">
                             </div>
                             <div class="mt-4">
                                 <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1 uppercase">{{ $product->category->name }}</h3>
-                                <p class="mt-1 tabular-nums mb-2">{{ $product->name }} </p>
+                                <p class="mt-1 tabular-nums mb-2 truncate-1-lines">{{ $product->name }} </p>
                                 <h2 class="font-sans text-gray-900 title-font text-lg font-medium">{{ $product->price }}
                                     <span
                                         class="text-gray-500 text-sm line-through ml-2">{{ $product->original_price }}</span>
@@ -241,11 +171,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> {{--Featured Products--}}
 
     <section class="bg-gray-100">
         <div class="max-w-7xl mx-auto px-8 py-16">
-            <div class="p-4 text-lg sticky top-20 z-0 bg-gray-100">
+            <div class="p-4 text-lg sticky top-20 z-10 bg-gray-100">
                 Trending Products
             </div>
             <div class="products">
@@ -254,7 +184,7 @@
                         <a href="{{ route('store.products.show',[$store, $product]) }}" class="lg:w-1/4 md:w-1/2 p-4 w-full group">
                             <div class="block relative h-48 rounded overflow-hidden">
                                 <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                                     src="https://dummyimage.com/420x260">
+                                     src="https://picsum.photos/200?random={{ $product->uuid }}">
                             </div>
                             <div class="mt-4">
                                 <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1 uppercase">{{ $product->category->name }}</h3>
@@ -269,11 +199,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> {{--Trending Products--}}
 
     <section class="bg-white">
         <div class="max-w-7xl mx-auto px-8 py-16">
-            <div class="p-4 text-lg sticky top-20 z-0 bg-white">
+            <div class="p-4 text-lg sticky top-20 z-10 bg-white">
                 Latest Products
             </div>
             <div class="products">
@@ -282,7 +212,7 @@
                         <a href="{{ route('store.products.show',[$store, $product]) }}" class="lg:w-1/4 md:w-1/2 p-4 w-full group">
                             <div class="block relative h-48 rounded overflow-hidden">
                                 <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                                     src="https://dummyimage.com/420x260">
+                                     src="https://picsum.photos/200?random={{ $product->uuid }}">
                             </div>
                             <div class="mt-4">
                                 <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1 uppercase">{{ $product->category->name }}</h3>
@@ -297,7 +227,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> {{--Latest Products--}}
 
     <section class="text-gray-700 body-font bg-gray-100">
         <div class="max-w-7xl mx-auto px-8 py-16 mx-auto flex flex-wrap">
@@ -308,24 +238,24 @@
             <div class="flex flex-wrap md:-m-2 -m-1">
                 <div class="flex flex-wrap w-1/2">
                     <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/500x300">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://picsum.photos/500?random=1">
                     </div>
                     <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/501x301">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://picsum.photos/500?random=2">
                     </div>
                     <div class="md:p-2 p-1 w-full">
-                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/600x360">
+                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://picsum.photos/500?random=3">
                     </div>
                 </div>
                 <div class="flex flex-wrap w-1/2">
                     <div class="md:p-2 p-1 w-full">
-                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361">
+                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://picsum.photos/500?random=4">
                     </div>
                     <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://picsum.photos/500?random=5">
                     </div>
                     <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://picsum.photos/500?random=6">
                     </div>
                 </div>
             </div>
@@ -499,7 +429,7 @@
         </div>
     </footer>
 
-    <section class="fixed bottom-20 right-20 flex items-center justify-center z-20">
+    <section class="fixed bottom-10 right-10 flex items-center justify-center z-20">
         <a href="{{ route('home') }}" class="p-4 bg-gradient-to-tr from-teal-500 to-blue-500 rounded-full text-white shadow-lg transform hover:-translate-y-0.5">
             <svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />

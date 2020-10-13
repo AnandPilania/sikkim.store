@@ -17,6 +17,7 @@ class StoreController extends Controller
         return view('store.index', [
             'store' => $store,
             'products' => Product::query()->where('store_id', $store->id)->latest()->take(8)->get(),
+            'gallery_products' => Product::query()->where('store_id', $store->id)->inRandomOrder()->take(6)->get(),
             'categories' => Category::query()->latest()->take(5)->get(),
         ]);
     }

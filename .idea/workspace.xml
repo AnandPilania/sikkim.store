@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6af6968e-fdb9-415c-a07b-b52e790cd760" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Store/StoreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Store/StoreController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/store/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/store/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -238,7 +239,7 @@
       <workItem from="1602398629617" duration="25969000" />
       <workItem from="1602473490183" duration="12795000" />
       <workItem from="1602486940608" duration="4541000" />
-      <workItem from="1602598477437" duration="6702000" />
+      <workItem from="1602598477437" duration="8647000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1602487821446</created>
@@ -282,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602604928514</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added store front page and product page">
+      <created>1602605805829</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602605805829</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,10 +319,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="594" y="377" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1680.1050@0.0.1680.1050" timestamp="1602475795996" />
-    <state x="423" y="87" key="CommitChangelistDialog2" timestamp="1602604928288">
+    <state x="423" y="87" key="CommitChangelistDialog2" timestamp="1602605805719">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="423" y="87" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1602604928288" />
+    <state x="423" y="87" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1602605805719" />
     <state x="577" y="444" key="ComposerInitDialogKey" timestamp="1601807547072">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
