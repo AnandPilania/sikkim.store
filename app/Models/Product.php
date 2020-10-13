@@ -21,4 +21,19 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function getPriceAttribute()
+    {
+        return '₹ '.($this->attributes['price'] / 100);
+    }
+
+    public function getOriginalPriceAttribute()
+    {
+        return '₹ '.(($this->attributes['price']/ 100) + 20);
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

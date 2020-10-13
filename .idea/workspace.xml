@@ -4,10 +4,15 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6af6968e-fdb9-415c-a07b-b52e790cd760" name="Default Changelist" comment="Initial Commit">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6af6968e-fdb9-415c-a07b-b52e790cd760" name="Default Changelist" comment="added store front page and product page">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/store/products/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Store/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Store/Admin/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Store/StoreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Store/StoreController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/store/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/store/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,11 +147,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1iPRn4TYKGhELMuxDHjKMfCecCv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -234,7 +243,8 @@
       <workItem from="1602351694465" duration="335000" />
       <workItem from="1602398629617" duration="25969000" />
       <workItem from="1602473490183" duration="12795000" />
-      <workItem from="1602486940608" duration="4499000" />
+      <workItem from="1602486940608" duration="4541000" />
+      <workItem from="1602598477437" duration="6159000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1602487821446</created>
@@ -264,15 +274,24 @@
       <option name="project" value="LOCAL" />
       <updated>1602498591655</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Initial Commit">
+      <created>1602498784009</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602498784009</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="added store front page and product page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added store front page and product page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="653" y="247" key="#com.intellij.ide.util.MemberChooser" timestamp="1602261231932">
@@ -283,18 +302,18 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="278" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1602001188556" />
-    <state x="578" y="286" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602439872241">
+    <state x="578" y="286" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602603361095">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="286" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1602439872241" />
+    <state x="578" y="286" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1602603361095" />
     <state x="594" y="377" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1602475795996">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="594" y="377" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1680.1050@0.0.1680.1050" timestamp="1602475795996" />
-    <state x="423" y="87" key="CommitChangelistDialog2" timestamp="1602498767552">
+    <state x="423" y="87" key="CommitChangelistDialog2" timestamp="1602604867930">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="423" y="87" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1602498767552" />
+    <state x="423" y="87" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1602604867930" />
     <state x="577" y="444" key="ComposerInitDialogKey" timestamp="1601807547072">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -351,10 +370,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="505" y="248" width="670" height="675" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1601810279691" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1602498426259">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1602602307558">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1602498426259" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1602602307558" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1602406552354" />
   </component>
 </project>

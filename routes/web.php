@@ -50,6 +50,7 @@ Route::domain('seller.' . config('services.domain.base'))->name('seller.')->grou
 Route::domain('{store}.' . config('services.domain.base'))->name('store.')->group(function () {
     //Store Home
     Route::get('/', [StoreController::class, 'show'])->name('home');
+    Route::resource('products', \App\Http\Controllers\ProductController::class);
     //Store Dashboard
     Route::prefix('admin')->middleware(['auth:store', 'store.owner'])->name('admin.')->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');

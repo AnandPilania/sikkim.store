@@ -1,5 +1,5 @@
 <x-layout.store title="{{ $store->name }}">
-    <header class="text-gray-700 body-font bg-white shadow-md sticky top-0 z-30">
+    <header class="text-gray-700 body-font bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-8 flex flex-wrap p-5 flex-col md:flex-row items-center">
             <a href="{{route('store.home', $store)}}"
                class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
@@ -90,41 +90,98 @@
         </div>
     </header>
 
-    <section class="text-gray-700 body-font bg-white">
-        <div class="max-w-7xl mx-auto px-8 flex px-5 py-24 md:flex-row flex-col items-center">
-            <div
-                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
-                    <br class="hidden lg:inline-block">readymade gluten
-                </h1>
-                <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
-                    plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken
-                    authentic tumeric truffaut hexagon try-hard chambray.</p>
-                <div class="flex justify-center">
-                    <button
-                        class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                        Buy Now
-                    </button>
-                    <button
-                        class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">
-                        Learn More
-                    </button>
+    <section class="text-gray-700 body-font overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8 py-32 mx-auto">
+            <div class="lg:w-4/5 mx-auto flex flex-wrap">
+                <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
+                <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                    <h2 class="text-sm title-font text-gray-500 tracking-widest uppercase">{{ $product->category->name }}</h2>
+                    <h1 class="text-gray-900 text-3xl title-font font-medium mb-1 capitalize">{{ $product->name }}</h1>
+                    <div class="flex mb-4">
+          <span class="flex items-center">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <span class="text-gray-600 ml-3">4 Reviews</span>
+          </span>
+                        <span class="flex ml-3 pl-3 py-2 border-l-2 border-gray-200">
+            <a class="text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-2 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-2 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+              </svg>
+            </a>
+          </span>
+                    </div>
+                    <p class="leading-relaxed">{{ $product->description }}</p>
+                    <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
+                        <div class="flex">
+                            <span class="mr-3">Color</span>
+                            <button class="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
+                            <button class="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
+                            <button class="border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"></button>
+                        </div>
+                        <div class="flex ml-6 items-center">
+                            <span class="mr-3">Size</span>
+                            <div class="relative">
+                                <label>
+                                    <select class="rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-indigo-500 text-base pl-3 pr-10">
+                                        <option>SM</option>
+                                        <option>M</option>
+                                        <option>L</option>
+                                        <option>XL</option>
+                                    </select>
+                                </label>
+                                <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="title-font font-medium text-2xl text-gray-900">$58.00</span>
+                        <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
+                            </svg>
+                        </button>
+                        <div class="flex space-x-1">
+                        <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add to Cart</button>
+                        <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Buy Now</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
             </div>
         </div>
     </section>
 
     <section class="text-gray-400 body-font bg-gray-800">
         <div class="max-w-7xl mx-auto px-8 py-16">
-            <div class="flex flex-col text-center w-full mb-20">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-200">Master Cleanse Reliac
-                    Heirloom</h1>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn
-                    asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them
-                    man bun deep jianbing selfies heirloom.</p>
+            <div class="flex flex-col text-left w-full mb-4">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-200">Products you may like</h1>
             </div>
             <div class="flex flex-wrap -m-4">
                 <div class="lg:w-1/3 sm:w-1/2 p-4">
@@ -209,123 +266,6 @@
                             <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
                                 microdosing tousled waistcoat.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-white">
-        <div class="max-w-7xl mx-auto px-8 py-16">
-            <div class="p-4 text-lg sticky top-20 z-10 bg-white">
-                    Featured Products
-            </div>
-            <div class="products">
-                <div class="flex flex-wrap mb-8">
-                    @foreach($products as $product)
-                        <a href="{{ route('store.products.show',[$store, $product]) }}" class="lg:w-1/4 md:w-1/2 p-4 w-full group">
-                            <div class="block relative h-48 rounded overflow-hidden">
-                                <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                                     src="https://dummyimage.com/420x260">
-                            </div>
-                            <div class="mt-4">
-                                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1 uppercase">{{ $product->category->name }}</h3>
-                                <p class="mt-1 tabular-nums mb-2">{{ $product->name }} </p>
-                                <h2 class="font-sans text-gray-900 title-font text-lg font-medium">{{ $product->price }}
-                                    <span
-                                        class="text-gray-500 text-sm line-through ml-2">{{ $product->original_price }}</span>
-                                </h2>
-                            </div>
-                        </a>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-gray-100">
-        <div class="max-w-7xl mx-auto px-8 py-16">
-            <div class="p-4 text-lg sticky top-20 z-10 bg-gray-100">
-                Trending Products
-            </div>
-            <div class="products">
-                <div class="flex flex-wrap mb-8">
-                    @foreach($products as $product)
-                        <a href="{{ route('store.products.show',[$store, $product]) }}" class="lg:w-1/4 md:w-1/2 p-4 w-full group">
-                            <div class="block relative h-48 rounded overflow-hidden">
-                                <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                                     src="https://dummyimage.com/420x260">
-                            </div>
-                            <div class="mt-4">
-                                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1 uppercase">{{ $product->category->name }}</h3>
-                                <p class="mt-1 tabular-nums mb-2">{{ $product->name }} </p>
-                                <h2 class="font-sans text-gray-900 title-font text-lg font-medium">{{ $product->price }}
-                                    <span
-                                        class="text-gray-500 text-sm line-through ml-2">{{ $product->original_price }}</span>
-                                </h2>
-                            </div>
-                        </a>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-white">
-        <div class="max-w-7xl mx-auto px-8 py-16">
-            <div class="p-4 text-lg sticky top-20 z-10 bg-white">
-                Latest Products
-            </div>
-            <div class="products">
-                <div class="flex flex-wrap mb-8">
-                    @foreach($products as $product)
-                        <a href="{{ route('store.products.show',[$store, $product]) }}" class="lg:w-1/4 md:w-1/2 p-4 w-full group">
-                            <div class="block relative h-48 rounded overflow-hidden">
-                                <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-                                     src="https://dummyimage.com/420x260">
-                            </div>
-                            <div class="mt-4">
-                                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1 uppercase">{{ $product->category->name }}</h3>
-                                <p class="mt-1 tabular-nums mb-2">{{ $product->name }} </p>
-                                <h2 class="font-sans text-gray-900 title-font text-lg font-medium">{{ $product->price }}
-                                    <span
-                                        class="text-gray-500 text-sm line-through ml-2">{{ $product->original_price }}</span>
-                                </h2>
-                            </div>
-                        </a>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="text-gray-700 body-font bg-gray-100">
-        <div class="max-w-7xl mx-auto px-8 py-16 mx-auto flex flex-wrap">
-            <div class="flex w-full mb-20 flex-wrap">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Master Cleanse Reliac Heirloom</h1>
-                <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
-            </div>
-            <div class="flex flex-wrap md:-m-2 -m-1">
-                <div class="flex flex-wrap w-1/2">
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/500x300">
-                    </div>
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/501x301">
-                    </div>
-                    <div class="md:p-2 p-1 w-full">
-                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/600x360">
-                    </div>
-                </div>
-                <div class="flex flex-wrap w-1/2">
-                    <div class="md:p-2 p-1 w-full">
-                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361">
-                    </div>
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302">
-                    </div>
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303">
                     </div>
                 </div>
             </div>
