@@ -12,11 +12,7 @@ class User extends Authenticatable implements MustVerifyEmail
     use HasFactory, Notifiable;
 
     protected $guard = 'user';
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+
     protected $fillable = [
         'name',
         'username',
@@ -24,47 +20,32 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
 
-    /**
-     * Get the route key for the model.
-     *
-     * @return string
-     */
-    public function getRouteKeyName()
+    public function getRouteKeyName(): string
     {
         return 'username';
     }
 
-    public function getFirstNameAttribute()
+    public function getFirstNameAttribute(): string
     {
         return current(explode(' ', $this->attributes['name']));
     }
 
-    public function getLastNameAttribute()
+    public function getLastNameAttribute(): string
     {
         return last(explode(' ', $this->attributes['name']));
     }
 
-    public function getAvatarAttribute()
+    public function getAvatarAttribute(): string
     {
-        return 'https://ui-avatars.com/api/?background=0D8ABC&color=fff&name='.$this->attributes['name'] ;
+        return 'https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=' . $this->attributes['name'];
     }
 }

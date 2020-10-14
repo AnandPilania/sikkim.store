@@ -11,10 +11,9 @@
             <div class="mb-6">
                 <div class="text-xs font-medium mb-3">Name:</div>
                 <div class="flex items-center space-x-4 text-sm text-gray-500">
-                    <div
-                        class="bg-gray-100 border border-gray-200 py-2 px-6 w-60 rounded-md">{{ auth('user')->user()->first_name  }}</div>
-                    <div
-                        class="bg-gray-100 border border-gray-200 py-2 px-6 w-60 rounded-md">{{ auth('user')->user()->last_name }}</div>
+                    <div class="bg-gray-100 border border-gray-200 py-2 px-6 w-60 rounded-md">
+                        {{ auth('user')->user()->name }}
+                    </div>
                 </div>
             </div>
             <div>
@@ -37,7 +36,7 @@
             <div class="mb-6">
                 <div class="flex items-center space-x-4 text-sm text-gray-500">
                     <div
-                        class="bg-gray-100 border border-gray-200 py-2 px-6 w-60 rounded-md">{{ 'raynirola@gmail.com' }}</div>
+                        class="bg-gray-100 border border-gray-200 py-2 px-6 w-60 rounded-md">{{ auth('user')->user()->email }}</div>
                 </div>
             </div>
         </div>
@@ -54,7 +53,7 @@
             <div class="mb-6">
                 <div class="flex items-center space-x-4 text-sm text-gray-500">
                     <div
-                        class="bg-gray-100 border border-gray-200 py-2 px-6 w-60 rounded-md font-sans tabular-nums">{{ '+91 9876544012' }}</div>
+                        class="bg-gray-100 border border-gray-200 py-2 px-6 w-60 rounded-md font-sans tabular-nums">{{ auth('user')->user()->phone ?? '+91 9876543212' }}</div>
                 </div>
             </div>
         </div>

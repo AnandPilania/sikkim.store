@@ -148,7 +148,7 @@
                             <path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"/>
                         </svg>
                         <p class="tracking-wider font-normal capitalize ml-3 text-gray-800 group-hover:text-gray-100 ">
-                            Girt Cards</p>
+                            Gift Cards</p>
                     </div>
                 </a>
                 <a href=""
