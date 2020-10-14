@@ -7,6 +7,29 @@
       <sourceFolder url="file://$MODULE_DIR$/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/08" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/24" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/44" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/45" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/47" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/4b" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/53" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/62" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/63" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/6a" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/6b" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/75" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/76" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/9c" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/b8" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/bd" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/c1" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/c2" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/df" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/e7" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/f2" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/f4" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/asm89/stack-cors" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
