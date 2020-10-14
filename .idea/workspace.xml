@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6af6968e-fdb9-415c-a07b-b52e790cd760" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/AddressController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/NotificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/OrderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/PaymentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/ProfileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/StuffController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/addresses/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/users/settings.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +239,7 @@
       <workItem from="1602473490183" duration="12795000" />
       <workItem from="1602486940608" duration="4541000" />
       <workItem from="1602598477437" duration="9003000" />
-      <workItem from="1602656379491" duration="8299000" />
+      <workItem from="1602656379491" duration="9031000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1602487821446</created>
@@ -309,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602609443242</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="User Profile and Address Front Page">
+      <created>1602665311801</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602665311801</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +314,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="added store front page and product page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added store front page and product page" />
+    <MESSAGE value="User Profile and Address Front Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Profile and Address Front Page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="653" y="247" key="#com.intellij.ide.util.MemberChooser" timestamp="1602261231932">
@@ -338,10 +334,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="594" y="377" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1680.1050@0.0.1680.1050" timestamp="1602475795996" />
-    <state x="423" y="87" key="CommitChangelistDialog2" timestamp="1602609443109">
+    <state x="423" y="87" key="CommitChangelistDialog2" timestamp="1602665311565">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="423" y="87" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1602609443109" />
+    <state x="423" y="87" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1602665311565" />
     <state x="577" y="444" key="ComposerInitDialogKey" timestamp="1601807547072">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -398,10 +394,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="505" y="248" width="670" height="675" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1601810279691" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1602663222223">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1602665993075">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1602663222223" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1602665993075" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1602406552354" />
   </component>
 </project>
