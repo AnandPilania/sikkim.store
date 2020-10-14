@@ -104,7 +104,7 @@
                                     @click="isOpen = !isOpen"
                                     @keydown.escape="isOpen = false">
                                     <img class="h-8 w-8 rounded-full object-cover border border-gray-500 hover:border-indigo-800"
-                                         src="{{'https://ui-avatars.com/api/?background=0D8ABC&color=fff&name='.auth()->user()->name}}"
+                                         src="{{ auth('user')->user()->avatar }}"
                                          alt=""/>
                                 </button>
                             </div>
@@ -118,13 +118,17 @@
                                  @click.away="isOpen = false "
                                  class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg z-20">
                                 <div class="rounded-md bg-white shadow-md">
-                                    <a href="{{ route('user.profile', auth()->guard('user')->user()->username) }}"
+                                    <a href="{{ route('user.profile') }}"
                                        class="block px-4 py-2 text-sm leading-5 text-gray-700 rounded-t-md hover:bg-green-500 hover:text-white focus:outline-none transition duration-150 ease-in-out">
                                         <i class="fas fa-user mr-4"></i> Your Profile </a>
 
-                                    <a href="{{ route('user.settings', auth()->guard('user')->user()->username) }}"
+                                    <a href="{{ '' }}"
                                        class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:text-white hover:bg-green-500 focus:outline-none transition duration-150 ease-in-out">
-                                        <i class="fas fa-cog mr-4"></i>Settings</a>
+                                        <i class="fas fa-cog mr-4"></i>Track Order</a>
+
+                                    <a href="{{ '' }}"
+                                       class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:text-white hover:bg-green-500 focus:outline-none transition duration-150 ease-in-out">
+                                        <i class="fas fa-cog mr-4"></i>Account Settings</a>
 
                                     <form action="{{ route('logout') }}"
                                           method="post">

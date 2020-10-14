@@ -53,5 +53,19 @@ class User extends Authenticatable implements MustVerifyEmail
         return 'username';
     }
 
+    public function getFirstNameAttribute()
+    {
+        return current(explode(' ', $this->attributes['name']));
+    }
 
+    public function getLastNameAttribute()
+    {
+        return last(explode(' ', $this->attributes['name']));
+    }
+
+    public function getAvatarAttribute()
+    {
+        return 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($this->attributes['email'] ))). "?d=" . urlencode( 'https://ui-avatars.com/api/?background=0D8ABC&color=fff&name='.$this->attributes['name'] ) . "&s=" . 200;
+
+    }
 }

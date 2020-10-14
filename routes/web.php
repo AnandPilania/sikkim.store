@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User\AddressController;
 use App\Http\Livewire\Store\Email;
 use App\Http\Livewire\Store\Login;
 use App\Http\Livewire\Store\Register;
@@ -30,9 +31,11 @@ Route::domain(config('services.domain.base'))->group(function () {
 
     // User Routes
     Route::prefix('user')->middleware(['auth:user', 'verified'])->name('user.')->group(function () {
-        Route::get('/', [UserController::class, 'index'])->name('home');
-        Route::get('{user}', [UserController::class, 'show'])->name('profile');
-        Route::get('{user}/settings', [UserController::class, 'edit'])->name('settings');
+        Route::get('/', UserController::class)->name('home');
+        Route::get('profile', [\App\Http\Controllers\User\ProfileController::class, 'show'])->name('profile');
+        Route::get('orders', [\App\Http\Controllers\User\OrderController::class, 'index'])->name('orders');
+        Route::get('addresses', [AddressController::class, 'index'])->name('addresses');
+        Route::get('settings', [UserController::class, 'edit'])->name('settings');
     });
 });
 
