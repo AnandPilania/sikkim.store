@@ -1,13 +1,18 @@
 <x-layout.store title="{{ $store->name }}">
     <header class="text-gray-700 body-font bg-white shadow-md sticky top-0 z-30">
-        <div class="max-w-7xl mx-auto px-8 flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <div class="max-w-7xl mx-auto px-3 md:px-8 flex py-3 md:py-5 items-center justify-between">
+            <div class="md:hidden">
+                <svg class="w-6 text-gray-700 fill-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+            </div>
             <a href="{{route('store.home', $store)}}"
-               class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                <img src="{{ $store->logo }}" class="h-10 w-10 object-cover" alt="">
-                <span class="ml-3 text-xl">{{ $store->name }}</span>
+               class="flex title-font font-medium items-center text-gray-900">
+                <img src="{{ $store->logo }}" class="h-5 md:h-10 w-5 md:w-10 object-cover" alt="">
+                <span class="ml-3 text-base md:text-xl text-gray-700">{{ $store->name }}</span>
             </a>
             <nav
-                class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                class="hidden md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	md:flex flex-wrap items-center text-base justify-center">
                 @foreach($categories as $category)
                     <a class="mr-5 hover:text-gray-900">{{ $category->name }}</a>
                 @endforeach
@@ -78,11 +83,17 @@
                     </div>
                 @else
                     <a href="{{ route('login') }}"
-                       class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
+                       class="hidden md:inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base">
                         Login
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                              stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <a href="{{ route('login') }}"
+                       class="md:hidden inline-flex items-center border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base">
+                        <svg class="w-7 text-gray-400 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd" />
                         </svg>
                     </a>
                 @endauth
@@ -90,34 +101,37 @@
         </div>
     </header>
 
-    <section class="text-gray-700 body-font bg-white">
-        <div class="max-w-7xl mx-auto px-8 flex px-5 py-24 md:flex-row flex-col items-center">
+    <section class="text-gray-700 body-font bg-gray-100 md:bg-white">
+        <div class="max-w-7xl mx-auto flex px-5 md:px-8 py-5 md:py-24 md:flex-row flex-col flex-col-reverse items-center">
             <div
-                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-12 md:mb-0 items-center text-left">
+                <h1 class="hidden md:block mt-3 md:mt-0 title-font sm:text-4xl text-xl mb-4 font-medium text-gray-900">Before they sold out
                     <br class="hidden lg:inline-block">readymade gluten
                 </h1>
-                <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
+                <h1 class="md:hidden mt-3 title-font text-lg mb-4 font-medium text-gray-700 truncate-1-lines">Before they sold out
+                    <br class="hidden lg:inline-block">readymade gluten
+                </h1>
+                <p class="mb-6 md:mb-8 md:leading-relaxed text-left text-sm md:text-base">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
                     plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken
                     authentic tumeric truffaut hexagon try-hard chambray.</p>
-                <div class="flex justify-center">
+                <div class="flex flex-col md:flex-row justify-center md:justify-start w-full">
                     <button
-                        class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                        class="mb-3 md:mb-0 inline-flex items-center justify-center text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-base md:text-lg">
                         Buy Now
                     </button>
                     <button
-                        class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">
+                        class="md:ml-4 inline-flex items-center justify-center text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-base md:text-lg">
                         Learn More
                     </button>
                 </div>
             </div>
-            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-full">
                 <img class="object-cover object-center rounded" alt="hero" src="https://picsum.photos/500?random=10">
             </div>
         </div>
     </section>
 
-    <section class="text-gray-400 body-font bg-gray-800">
+    <section class="hidden md:block text-gray-400 body-font bg-gray-800">
         <div class="max-w-7xl mx-auto px-8 py-16">
             <div class="flex flex-col text-center w-full mb-20">
                 <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-200">Master Cleanse Reliac
@@ -146,14 +160,14 @@
     </section> {{-- Gallery Top--}}
 
     <section class="bg-white">
-        <div class="max-w-7xl mx-auto px-8 py-16">
-            <div class="p-4 text-lg sticky top-20 z-10 bg-white">
+        <div class="max-w-7xl mx-auto px-5 md:px-8 py-5 md:py-24">
+            <div class="py-2 md:py-4 text-lg md:sticky md:top-20 z-10 bg-white">
                     Featured Products
             </div>
-            <div class="products">
-                <div class="flex flex-wrap mb-8">
+            <div class="products mt-6 md:mt-3">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-10">
                     @foreach($products as $product)
-                        <a href="{{ route('store.products.show',[$store, $product]) }}" class="lg:w-1/4 md:w-1/2 p-4 w-full group">
+                        <a href="{{ route('store.products.show',[$store, $product]) }}" class="group">
                             <div class="block relative h-48 rounded overflow-hidden">
                                 <img alt="ecommerce" class="object-cover object-center w-full h-full block"
                                      src="https://picsum.photos/200?random={{ $product->uuid }}">
@@ -173,15 +187,15 @@
         </div>
     </section> {{--Featured Products--}}
 
-    <section class="bg-gray-100">
-        <div class="max-w-7xl mx-auto px-8 py-16">
-            <div class="p-4 text-lg sticky top-20 z-10 bg-gray-100">
+    <section class="bg-gray-200">
+        <div class="max-w-7xl mx-auto px-5 md:px-8 py-5 md:py-24">
+            <div class="py-2 md:py-4 text-lg md:sticky md:top-20 z-10 bg-gray-200">
                 Trending Products
             </div>
-            <div class="products">
-                <div class="flex flex-wrap mb-8">
+            <div class="products mt-6 md:mt-3">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-10">
                     @foreach($products as $product)
-                        <a href="{{ route('store.products.show',[$store, $product]) }}" class="lg:w-1/4 md:w-1/2 p-4 w-full group">
+                        <a href="{{ route('store.products.show',[$store, $product]) }}" class="group">
                             <div class="block relative h-48 rounded overflow-hidden">
                                 <img alt="ecommerce" class="object-cover object-center w-full h-full block"
                                      src="https://picsum.photos/200?random={{ $product->uuid }}">
@@ -202,14 +216,14 @@
     </section> {{--Trending Products--}}
 
     <section class="bg-white">
-        <div class="max-w-7xl mx-auto px-8 py-16">
-            <div class="p-4 text-lg sticky top-20 z-10 bg-white">
+        <div class="max-w-7xl mx-auto px-5 md:px-8 py-5 md:py-24 pb-12">
+            <div class="py-2 md:py-4 text-lg md:sticky md:top-20 z-10 bg-white">
                 Latest Products
             </div>
-            <div class="products">
-                <div class="flex flex-wrap mb-8">
+            <div class="products mt-6 md:mt-3">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-10">
                     @foreach($products as $product)
-                        <a href="{{ route('store.products.show',[$store, $product]) }}" class="lg:w-1/4 md:w-1/2 p-4 w-full group">
+                        <a href="{{ route('store.products.show',[$store, $product]) }}" class="group">
                             <div class="block relative h-48 rounded overflow-hidden">
                                 <img alt="ecommerce" class="object-cover object-center w-full h-full block"
                                      src="https://picsum.photos/200?random={{ $product->uuid }}">
@@ -229,11 +243,11 @@
         </div>
     </section> {{--Latest Products--}}
 
-    <section class="text-gray-700 body-font bg-gray-100">
-        <div class="max-w-7xl mx-auto px-8 py-16 mx-auto flex flex-wrap">
-            <div class="flex w-full mb-20 flex-wrap">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Master Cleanse Reliac Heirloom</h1>
-                <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+    <section class="text-gray-400 body-font bg-gray-800">
+        <div class="max-w-7xl mx-auto px-5 md:px-8 py-10 md:py-24 flex flex-wrap">
+            <div class="flex w-full mb-10 md:mb-20 flex-wrap">
+                <h1 class="sm:text-3xl text-xl font-medium title-font text-gray-200 lg:w-1/3 lg:mb-0 mb-4">Master Cleanse Reliac Heirloom</h1>
+                <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-sm">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
             </div>
             <div class="flex flex-wrap md:-m-2 -m-1">
                 <div class="flex flex-wrap w-1/2">
@@ -262,115 +276,64 @@
         </div>
     </section>
 
-    <footer class="text-gray-700 body-font">
-        <div class="max-w-7xl mx-auto px-8 py-24">
-            <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
-                <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
+    <footer class="text-gray-300 body-font bg-black">
+        <div class="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-5 md:text-left text-center">
+                <div class="">
+                    <h2 class="title-font font-medium text-gray-200 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <nav class="list-none mb-10 text-sm md:text-base">
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+                            <a class="text-gray-400 hover:text-gray-300">First Link</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                            <a class="text-gray-400 hover:text-gray-300">Second Link</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                            <a class="text-gray-400 hover:text-gray-300">Third Link</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                        </li>
-                    </nav>
-                </div>
-                <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                            <a class="text-gray-400 hover:text-gray-300">Fourth Link</a>
                         </li>
                     </nav>
                 </div>
-                <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
+                <div class="md:text-center">
+                    <h2 class="title-font font-medium text-gray-200 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <nav class="list-none mb-10 text-sm md:text-base">
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+                            <a class="text-gray-400 hover:text-gray-300">First Link</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                            <a class="text-gray-400 hover:text-gray-300">Second Link</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                            <a class="text-gray-400 hover:text-gray-300">Third Link</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                        </li>
-                    </nav>
-                </div>
-                <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                            <a class="text-gray-400 hover:text-gray-300">Fourth Link</a>
                         </li>
                     </nav>
                 </div>
-                <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                <div class="md:text-right">
+                    <h2 class="title-font font-medium text-gray-200 tracking-widest text-sm mb-3">CATEGORIES</h2>
                     <nav class="list-none mb-10">
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+                            <a class="text-gray-400 hover:text-gray-300">First Link</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                            <a class="text-gray-400 hover:text-gray-300">Second Link</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                            <a class="text-gray-400 hover:text-gray-300">Third Link</a>
                         </li>
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                        </li>
-                    </nav>
-                </div>
-                <div class="lg:w-1/6 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                            <a class="text-gray-400 hover:text-gray-300">Fourth Link</a>
                         </li>
                     </nav>
                 </div>
             </div>
         </div>
-        <div class="border-t border-gray-200">
-            <div class="container px-5 py-8 flex flex-wrap mx-auto items-center">
+        <div class="border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-5 md:px-8 px-5 py-4 flex flex-wrap mx-auto items-center">
                 <div class="flex md:flex-no-wrap flex-wrap justify-center md:justify-start">
                     <label>
                         <input
@@ -420,17 +383,14 @@
         </div>
         <div class="bg-gray-200">
             <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 {{ $store->name }} —
-                    <a href="" class="text-gray-600 ml-1" target="_blank"
-                       rel="noopener noreferrer">@twitterhandle</a>
+                <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 {{ $store->name }}
                 </p>
-                <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-500 text-sm">Enamel pin tousled raclette tacos irony</span>
             </div>
         </div>
     </footer>
 
-    <section class="fixed bottom-10 right-10 flex items-center justify-center z-20">
-        <a href="{{ route('home') }}" class="p-4 bg-gradient-to-tr from-teal-500 to-blue-500 rounded-full text-white shadow-lg transform hover:-translate-y-0.5">
+    <section class="fixed bottom-5 md:bottom-10 right-5 md:right-10 flex items-center justify-center z-20">
+        <a href="{{ route('home') }}" class="p-3 md:p-4 bg-gradient-to-tr from-teal-500 to-blue-500 rounded-full text-white shadow-lg transform hover:-translate-y-0.5">
             <svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
             </svg>

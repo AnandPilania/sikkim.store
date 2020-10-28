@@ -13,6 +13,7 @@ class ProductController extends Controller
         return view('store.products.show', [
             'store' => $store,
             'product' => $product,
+            'products' => Product::query()->where('store_id', $store->id)->latest()->take(8)->get(),
             'categories' => Category::query()->latest()->take(5)->get(),
         ]);
     }
