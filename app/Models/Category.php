@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Icons\Icons;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -26,5 +27,10 @@ class Category extends Model
     public function getRouteKeyName()
     {
         return 'uuid';
+    }
+
+    public function getIconAttribute()
+    {
+        return (new Icons())->category();
     }
 }

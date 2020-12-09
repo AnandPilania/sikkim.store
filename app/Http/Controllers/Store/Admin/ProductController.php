@@ -15,7 +15,7 @@ class ProductController extends Controller
     {
         return view('store.admin.products.index', [
             'store' => $store,
-            'products' => Product::query()->where('store_id', $store->id)->latest()->paginate(15),
+            'products' => $store->products()->latest()->paginate(8),
         ]);
     }
 

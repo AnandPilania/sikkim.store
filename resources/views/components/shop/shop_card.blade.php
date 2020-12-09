@@ -1,6 +1,6 @@
 <div>
     <a href="{{ route('store.home', $store->slug) }}"
-       class="relative bg-gradient-to-r from-white to-white hover:from-teal-500 hover:to-blue-500 group shadow-sm hover:shadow-2xl transform hover:-translate-y-0.5 rounded-md flex items-center justify-between transition ease-in-out duration-200">
+       class="p-2 relative bg-gradient-to-r from-white to-white hover:from-teal-500 hover:to-blue-500 group shadow-sm hover:shadow-2xl transform hover:-translate-y-0.5 rounded-md flex items-center justify-between transition ease-in-out duration-200">
         <div class="w-20 sm:w-3/12 h-full p-2 lg:p-4 border-r">
             <img src="{{ $store->logo }}" class="w-full h-full" alt="">
         </div>

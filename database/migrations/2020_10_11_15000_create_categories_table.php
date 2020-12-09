@@ -20,6 +20,7 @@ class CreateCategoriesTable extends Migration
             $table->uuid('uuid')->unique()->default(Str::uuid());
             $table->string('name');
             $table->string('slug')->unique();
+            $table->text('icon')->nullable();
             $table->timestamps();
         });
     }

@@ -11,7 +11,7 @@ class AccountController extends Controller
 {
     public function index(Store $store): View
     {
-        return view('shop.account.index', compact('store'));
+        return view('store.admin.account.index', compact('store'));
     }
 
     public function create()

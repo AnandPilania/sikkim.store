@@ -1,4 +1,4 @@
-<header class="fixed top-0 inset-x-0 z-10" x-data="{ open: false, modal: false }">
+<header class="sticky top-0 z-10" x-data="{ open: false, modal: false }">
     <nav class="relative bg-gray-50">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div class="relative flex items-center justify-between h-16">
@@ -125,10 +125,6 @@
                                     <a href="{{ '' }}"
                                        class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:text-white hover:bg-green-500 focus:outline-none transition duration-150 ease-in-out">
                                         <i class="fas fa-cog mr-4"></i>Track Order</a>
-
-                                    <a href="{{ '' }}"
-                                       class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:text-white hover:bg-green-500 focus:outline-none transition duration-150 ease-in-out">
-                                        <i class="fas fa-cog mr-4"></i>Account Settings</a>
 
                                     <form action="{{ route('logout') }}"
                                           method="post">

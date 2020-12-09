@@ -4,76 +4,28 @@
             <div class="flex">
                 <x-dashboard-side-bar :store="$store"/>
                 <x-dashboard.content :store="$store" name="Products">
-                    <div class="text-gray-600">
-                        <div class="flex flex-col mb-4">
-                            <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                                        <table class="min-w-full divide-y divide-gray-200">
-                                            <thead>
-                                                <tr>
-                                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                                        Name
-                                                    </th>
-                                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                                        Title
-                                                    </th>
-                                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                                        Inventory
-                                                    </th>
-                                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                                        Actions
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="bg-white divide-y divide-gray-200">
-                                                @foreach($products as $product)
-                                                    <tr>
-                                                        <td class="px-6 py-4 whitespace-no-wrap">
-                                                            <div class="flex items-center">
-                                                                <div class="flex-shrink-0 h-10 w-10">
-                                                                    <img class="h-10 w-10 rounded-full"
-                                                                         src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
-                                                                         alt="">
-                                                                </div>
-                                                                <div class="ml-4">
-                                                                    <div
-                                                                        class="text-sm leading-5 font-medium text-gray-900">
-                                                                        {{ $product->name }}
-                                                                    </div>
-                                                                    <div class="text-sm leading-5 text-gray-500">
-                                                                        jane.cooper@example.com
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                            <div class="text-sm leading-5 text-gray-900">
-                                                                {{ $product->description }}
-                                                            </div>
-                                                            <div
-                                                                class="text-sm leading-5 text-gray-500">{{ $product->category->name }}</div>
-                                                        </td>
-                                                        <td class="px-6 py-4 whitespace-no-wrap">
-                                                        <span
-                                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                                          {{ rand(0, 99) }}
-                                                        </span>
-                                                        </td>
-                                                        <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                                                            Delete
-                                                        </td>
-                                                    </tr>
-                                                @endforeach
-
-                                            </tbody>
-                                        </table>
-                                    </div>
+                    <x-slot name="action">
+                        <button
+                            class="bg-indigo-600 text-white px-4 py-2.5 focus:outline-none hover:bg-indigo-700 rounded-md text-sm">
+                            Add Product
+                        </button>
+                    </x-slot>
+                    <div class="text-gray-600 grid grid-cols-4 gap-6 mb-4">
+                        @foreach ($products as $product)
+                            <div class="bg-white shadow-sm rounded-md overflow-hidden hover:shadow-lg border">
+                                <div class="h-56 w-full object-cover">
+                                    <img
+                                        src="{{ $product->featured_image }}"
+                                        class="h-full w-full object-cover" alt="">
+                                </div>
+                                <div class="p-4 border-t">
+                                    <p class="text-sm leading-relaxed mb-2 truncate-1-lines">{{ $product->name }}</p>
+                                    <p class="text-gray-800 font-bold font-sans tabular-nums uppercase">{{ Str::substr($product->uuid, 0, 8) }}</p>
                                 </div>
                             </div>
-                        </div>
-                        {{$products->links()}}
+                        @endforeach
                     </div>
+                    {{ $products->links() }}
                 </x-dashboard.content>
             </div>
         </div>

@@ -21,7 +21,7 @@ class CategoryController extends Controller
     {
         return view('store.admin.categories.index', [
             'store' => $store,
-            'categories' => Category::query()->latest()->take(5)->get(),
+            'categories' => $store->categories()->latest()->paginate(10),
         ]);
     }
 

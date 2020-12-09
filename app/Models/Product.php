@@ -12,6 +12,8 @@ class Product extends Model
 
     protected $guarded = [];
 
+    protected $appends = ['category_name'];
+
     public function store(): BelongsTo
     {
         return $this->belongsTo(Store::class);
@@ -35,5 +37,26 @@ class Product extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    public function getFeaturedImageAttribute()
+    {
+        return "https://picsum.photos/200?random=".$this->attributes['uuid'];
+    }
+
+    public function getCategoryNameAttribute()
+    {
+        return $this->category->name;
+    }
+
+    public function relatedProducts()
+    {
+        return $this->newQuery()->whereHas('store', function ($query) {
+            $query->where('slug', $this->store->slug);
+        })->whereHas('category', function ($query){
+            $query->where('name', $this->category->name);
+        } )->latest()
+            ->take(8)->with('category')
+            ->get();
     }
 }

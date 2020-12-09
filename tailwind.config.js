@@ -10,7 +10,7 @@ module.exports = {
                 19: '4.75rem'
             },
             fontFamily: {
-                body: 'Poppins'
+                poppins: ['Poppins', 'sans-serif'],
             },
             fontSize: {
                 small: '13px',

@@ -36,7 +36,8 @@
                    class="block w-full px-6 py-3 text-small @if(request()->routeIs('user.addresses')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
-                            class="w-4 h-4 @if(request()->routeIs('user.addresses')) text-white @else  text-gray-800 @endif group-hover:text-gray-100 " viewBox="0 0 20 20"
+                            class="w-4 h-4 @if(request()->routeIs('user.addresses')) text-white @else  text-gray-800 @endif group-hover:text-gray-100 "
+                            viewBox="0 0 20 20"
                             fill="currentColor">
                             <path fill-rule="evenodd"
                                   d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
@@ -53,47 +54,50 @@
                     </div>
                 </div>
 
-                <a href=""
-                   class="block w-full px-6 py-3 text-small  group hover:bg-gray-700 transition ease-in-out duration-200">
+                <a href="{{ route('user.orders.current') }}"
+                   class="block w-full px-6 py-3 text-small @if(request()->routeIs('user.orders.current')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
-                            class="w-4 h-4 text-gray-800 group-hover:text-gray-100 " viewBox="0 0 20 20"
+                            class="w-4 h-4 @if(request()->routeIs('user.orders.current')) text-white @else  text-gray-800 @endif group-hover:text-gray-100 "
+                            viewBox="0 0 20 20"
                             fill="currentColor">
                             <path fill-rule="evenodd"
                                   d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
                                   clip-rule="evenodd"/>
                         </svg>
-                        <p class="tracking-wider font-normal capitalize ml-3 text-gray-800 group-hover:text-gray-100 ">
+                        <p class="tracking-wider font-normal capitalize ml-3 @if(request()->routeIs('user.orders.current')) text-white @else  text-gray-800 @endif group-hover:text-gray-100 ">
                             Current Orders</p>
                     </div>
                 </a>
-                <a href=""
-                   class="block w-full px-6 py-3 text-small  group hover:bg-gray-700 transition ease-in-out duration-200">
+
+                <a href="{{ route('user.orders.completed') }}"
+                   class="block w-full px-6 py-3 text-small @if(request()->routeIs('user.orders.completed')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
-                            class="w-4 h-4 text-gray-800 group-hover:text-gray-100 " viewBox="0 0 20 20"
+                            class="w-4 h-4 @if(request()->routeIs('user.orders.completed')) text-white @else  text-gray-800 @endif group-hover:text-gray-100 "
+                            viewBox="0 0 20 20"
                             fill="currentColor">
                             <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
                             <path fill-rule="evenodd"
                                   d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                   clip-rule="evenodd"/>
                         </svg>
-                        <p class="tracking-wider font-normal capitalize ml-3 text-gray-800 group-hover:text-gray-100 ">
+                        <p class="tracking-wider font-normal capitalize ml-3 @if(request()->routeIs('user.orders.completed')) text-white @else  text-gray-800 @endif group-hover:text-gray-100 ">
                             Completed Orders</p>
                     </div>
                 </a>
-                <a href=""
-                   class="block w-full px-6 py-3 text-small  group hover:bg-gray-700 transition ease-in-out duration-200">
+                <a href="{{ route('user.orders.cancelled') }}"
+                   class="block w-full px-6 py-3 text-small @if(request()->routeIs('user.orders.cancelled')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
-                            class="w-4 h-4 text-gray-800 group-hover:text-gray-100 " viewBox="0 0 20 20"
+                            class="w-4 h-4 @if(request()->routeIs('user.orders.cancelled')) text-white @else  text-gray-800 @endif group-hover:text-gray-100 " viewBox="0 0 20 20"
                             fill="currentColor">
                             <path fill-rule="evenodd"
                                   d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
                                   clip-rule="evenodd"/>
                         </svg>
-                        <p class="tracking-wider font-normal capitalize ml-3 text-gray-800 group-hover:text-gray-100 ">
-                            Cancelled Orders</p>
+                        <p class="tracking-wider font-normal capitalize ml-3 @if(request()->routeIs('user.orders.cancelled')) text-white @else  text-gray-800 @endif group-hover:text-gray-100 ">
+                        Cancelled Orders</p>
                     </div>
                 </a>
 
@@ -103,7 +107,7 @@
                     </div>
                 </div>
 
-                <a href=""
+                <a href="{{ route('user.notifications.unread') }}"
                    class="block w-full px-6 py-3 text-small  group hover:bg-gray-700 transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
@@ -116,7 +120,7 @@
                             Unread Notifications</p>
                     </div>
                 </a>
-                <a href=""
+                <a href="{{ route('user.notifications.all') }}"
                    class="block w-full px-6 py-3 text-small  group hover:bg-gray-700 transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
@@ -136,7 +140,7 @@
                     </div>
                 </div>
 
-                <a href=""
+                <a href="{{ route('user.payments.gift_cards') }}"
                    class="block w-full px-6 py-3 text-small  group hover:bg-gray-700 transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
@@ -230,7 +234,7 @@
             </div>
 
             <div class="bg-white shadow-md p-8 text-gray-700">
-                    {{ $slot }}
+                {{ $slot }}
             </div>
         </div>
     </div>

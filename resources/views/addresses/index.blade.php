@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            <button class="w-60 px-3 py-2 bg-blue-500 text-white rounded-md focus:outline-none focus:shadow-outline-blue transform hover:-translate-y-0.5 mb-8">
+            <button class="w-60 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white hover:shadow-lg rounded-md focus:outline-none focus:shadow-outline-blue transform hover:-translate-y-0.5 mb-8 transition ease-in-out duration-150">
                 Add Address
             </button>
         </div>

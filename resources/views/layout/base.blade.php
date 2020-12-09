@@ -9,24 +9,21 @@
         <!-- Favicon -->
         <link rel="shortcut icon" href="{{ url(asset('favicon.ico')) }}">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
-
         <!-- Styles -->
         <link rel="stylesheet" href="{{ url(mix('css/app.css')) }}">
         @livewireStyles
 
-        <!-- Scripts -->
-        <script src="{{ url(mix('js/app.js')) }}" defer></script>
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
 
-    <body class="font-body">
+    <body class="font-poppins">
 
         {{ $slot }}
 
+        <!-- Scripts -->
+        <script src="{{ url(mix('js/app.js')) }}" defer></script>
         @livewireScripts
         {{ $script }}
     </body>
