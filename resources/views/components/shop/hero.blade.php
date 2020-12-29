@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => "relative mt-16 bg-gradient-to-tr from-teal-500 to-blue-500 py-16" ]) }} >
+<section {{ $attributes->merge(['class' => "relative mt-16 bg-gradient-to-tr from-green-500 to-blue-500 py-16" ]) }} >
     <div class="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row items-center justify-between flex-col-reverse">
             <div class="flex-1 flex flex-col md:mr-16">

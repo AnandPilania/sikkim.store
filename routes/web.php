@@ -65,7 +65,7 @@ Route::domain('{store}.' . config('services.domain.base'))->name('store.')->grou
     //Store Home
 //    Route::get('/', [StoreController::class, 'show'])->name('home');
     Route::get('/', function (\App\Models\Store $store){
-        return view('test.newstore', [
+        return view('store.themes.default.index', [
             'store' => $store,
             'latest_products' => Product::query()->where('store_id', $store->id)->latest()->take(8)->get(),
             'featured_products' => Product::query()->where('store_id', $store->id)->inRandomOrder()->take(4)->get(),

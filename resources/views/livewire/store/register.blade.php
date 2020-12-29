@@ -1,6 +1,6 @@
 <div>
     <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-    <div class="absolute inset-0 bg-gradient-to-r from-teal-400 to-blue-400 md:shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-400 md:shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
     <div class="relative px-4 py-10 bg-white md:shadow-lg sm:rounded-3xl sm:p-20">
         <div class="sm:mx-auto sm:w-full sm:max-w-md">
             <div class="px-4 py-8 bg-white md:shadow-md sm:rounded-lg sm:px-10">

@@ -1,5 +1,5 @@
 <x-layout.app title="Store Listings">
-    <x-shop.section class="relative mt-16 bg-gradient-to-tr from-teal-500 to-blue-500 py-4">
+    <x-shop.section class="relative mt-16 bg-gradient-to-tr from-green-500 to-blue-500 py-4">
         <div class="flex items-center justify-between text-white">
             <div>
                 <p class="text-lg uppercase tracking-tight font-medium py-2">Shops</p>
@@ -28,7 +28,7 @@
 
     <livewire:component.all-stores/>
 
-    <x-shop.section class="bg-gradient-to-tr from-teal-500 to-blue-500 py-4">
+    <x-shop.section class="bg-gradient-to-tr from-green-500 to-blue-500 py-4">
         <div class="text-white flex flex-col md:flex-row items-center justify-between">
             <p class="text-sm font-light max-w-md text-center md:text-left md:max-w-lg lg:max-w-3xl mb-4 md:mb-0">
                 Want to sell online? Wish you had an online store? Signup now and
@@ -70,7 +70,7 @@
         </div>
     </x-shop.section_with_header>
 
-    <x-shop.section class="bg-gradient-to-tr from-teal-500 to-blue-500 py-4">
+    <x-shop.section class="bg-gradient-to-tr from-green-500 to-blue-500 py-4">
         <div class="text-white flex flex-col md:flex-row items-center justify-between">
             <p class="text-sm font-light max-w-md text-center md:text-left md:max-w-lg lg:max-w-3xl mb-4 md:mb-0">
                 Still confused? We are available 24x7 to assist you, just hit that support 👉🏼 whenever you feel like.
