@@ -1,12 +1,13 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\Preorder\VerificationController;
+use App\Http\Controllers\Store\StoreController;
 use App\Http\Controllers\User\AddressController;
 use App\Http\Livewire\Store\Email;
 use App\Http\Livewire\Store\Login;
 use App\Http\Livewire\Store\Register;
 use App\Http\Livewire\Store\Reset;
-use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\User\UserController;
@@ -46,7 +47,7 @@ Route::domain(config('services.domain.base'))->group(function () {
     });
 
     // Preorder Routes
-    Route::middleware('signed')->get('/preorder/verify/{preorder}', [VerificationController::class, 'store'] )->name('preorder.verify');
+    Route::middleware('signed')->get('/preorder/verify/{preorder}', [VerificationController::class, 'store'])->name('preorder.verify');
 });
 
 //Seller Specific Routes
@@ -62,16 +63,17 @@ Route::domain('seller.' . config('services.domain.base'))->name('seller.')->grou
 
 // Store Specific Routes
 Route::domain('{store}.' . config('services.domain.base'))->name('store.')->group(function () {
-    //Store Home
-//    Route::get('/', [StoreController::class, 'show'])->name('home');
-    Route::get('/', function (\App\Models\Store $store){
-        return view('store.themes.default.index', [
-            'store' => $store,
-            'latest_products' => Product::query()->where('store_id', $store->id)->latest()->take(8)->get(),
-            'featured_products' => Product::query()->where('store_id', $store->id)->inRandomOrder()->take(4)->get(),
-        ]);
-    })->name('home');
-    Route::resource('products', \App\Http\Controllers\ProductController::class);
+
+    //Store
+    Route::middleware('cart.make')->group(function () {
+        Route::get('/', [StoreController::class, 'show'])->name('home');
+        Route::resource('products', \App\Http\Controllers\ProductController::class);
+        Route::middleware('auth:user')->group(function () {
+            Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+            Route::get('/cart/{product}', [CartController::class, 'store'])->name('cart.store');
+        });
+    });
+
     //Store Dashboard
     Route::prefix('admin')->middleware(['auth:store', 'store.owner'])->name('admin.')->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');

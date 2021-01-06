@@ -14,11 +14,12 @@ class StoreController extends Controller
 {
     public function show(Store $store): View
     {
-        return view('store.index', [
+        return view('store.themes.default.index', [
             'store' => $store,
-            'products' => Product::query()->where('store_id', $store->id)->latest()->take(8)->get(),
-            'gallery_products' => Product::query()->where('store_id', $store->id)->inRandomOrder()->take(6)->get(),
-            'categories' => Category::query()->latest()->take(5)->get(),
+            'latest_products' => Product::query()->where('store_id', $store->id)
+                ->latest()->take(8)->get(),
+            'featured_products' => Product::query()->where('store_id', $store->id)
+                ->inRandomOrder()->take(4)->get(),
         ]);
     }
 

@@ -1,4 +1,4 @@
-<header x-data="{ scrollBarAtTop : true, open: false, modal: false }" class="fixed top-0 inset-x-0 z-10" @scroll.window="scrollBarAtTop = (window.pageYOffset > 150) ? false : true">
+<header x-data="{ scrollBarAtTop : true, open: false, modal: false }" class="fixed top-0 inset-x-0 z-10" @scroll.window="scrollBarAtTop = (window.pageYOffset > 20) ? false : true">
     <nav class="relative" :class="{'py-3 sm:py-4 md:py-6 bg-white md:bg-transparent' : scrollBarAtTop, 'bg-white shadow py-3 sm:py-3 md:py-4' : !scrollBarAtTop}">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="relative flex items-center justify-between">
@@ -31,7 +31,7 @@
                     <div class="hidden sm:flex items-center space-x-12 text-sm text-gray-500">
                             <a href="{{ route('home') }}" class="hidden md:block hover:text-blue-600 @if(request()->routeIs('home')) text-blue-700 font-medium @endif">Home</a>
                             <a href="{{ route('shops') }}" class="hidden md:block hover:text-blue-600 @if(request()->routeIs('shops')) text-blue-700 font-medium @endif">Shops</a>
-                            <button type="button" class="hidden md:block hover:text-blue-600 focus:outline-none">Contact</button>
+                            <livewire:contact-us/>
                             <a href="" class="hidden md:block hover:text-blue-600">Help</a>
                     </div>
                 </div>

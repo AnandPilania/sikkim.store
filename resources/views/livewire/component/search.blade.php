@@ -26,10 +26,10 @@
                     <input wire:model.debounce.300ms="search" name="search"
                            x-on:keydown.escape="($wire.set('search', null), search = false)"
                            x-ref="searchInputField"
-                           class="w-full py-3 px-4 sm:py-5 sm:px-7 md:py-8 md:px-12 rounded-md focus:outline-none focus:shadow-none text-base md:text-xl text-brand"
+                           class="w-full py-3 px-4 sm:py-5 sm:px-7 md:py-8 md:px-12 rounded-md focus:outline-none focus:shadow-none text-base md:text-xl text-gray-800"
                            type="text" placeholder="What are you looking for?" autocomplete="off">
                     <div class="absolute top-0 right-0 flex items-center h-full">
-                        <svg wire:loading class="animate-spin h-8 w-8 text-brand mr-5"
+                        <svg wire:loading class="animate-spin h-8 w-8 text-gray-800 mr-5"
                              fill="none" viewBox="0 0 24 24">
                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
                                     stroke-width="3"></circle>
@@ -43,7 +43,7 @@
                 @if($articles)
                     @forelse( $articles as $article)
                         <a href="{{ route('article.show', $article->slug) }}"
-                           class="hidden md:block max-w-3xl mx-auto w-full mt-4 py-3 px-4 sm:px-7 md:px-12 rounded-md text-brand bg-gray-200 hover:bg-white cursor-pointer group hover:shadow-2xl transform hover:scale-x-105 transition ease-in-out duration-200">
+                           class="hidden md:block max-w-3xl mx-auto w-full mt-4 py-3 px-4 sm:px-7 md:px-12 rounded-md text-gray-800 bg-gray-200 hover:bg-white cursor-pointer group hover:shadow-2xl transform hover:scale-x-105 transition ease-in-out duration-200">
                             <h1 class="font-title text-lg mb-1 font-semibold truncate-1-lines">{{ $article->title }}</h1>
                             <h1 class="text-sm truncate-2-lines mb-2">{{ $article->summary }}</h1>
                             <h2 class="text-xs text-gray-500">In {{ $article->topic->first()->name }}
@@ -51,7 +51,7 @@
                                 | {{ $article->user->name }}</h2>
                         </a>
                         <a href="{{ route('article.show', $article->slug) }}"
-                           class="block md:hidden max-w-3xl mx-auto w-full mt-4 py-3 px-4 sm:px-7 md:px-12 rounded-md text-brand bg-gray-200 hover:bg-white cursor-pointer group hover:shadow-2xl transition ease-in-out duration-200">
+                           class="block md:hidden max-w-3xl mx-auto w-full mt-4 py-3 px-4 sm:px-7 md:px-12 rounded-md text-gray-800 bg-gray-200 hover:bg-white cursor-pointer group hover:shadow-2xl transition ease-in-out duration-200">
                             <h1 class="font-title text-base mb-1 font-semibold truncate-1-lines">{{ $article->title }}</h1>
                             <h1 class="text-sm truncate-2-lines mb-2 text-gray-900">{{ $article->summary }}</h1>
                             <h2 class="text-xs text-gray-500">In {{ $article->topic->first()->name }}
@@ -60,9 +60,9 @@
                         </a>
                     @empty
                         <div
-                            class="max-w-3xl mx-auto w-full flex items-center justify-center mt-4 py-6 px-4 sm:px-7 md:px-12 rounded-md text-brand bg-gray-100">
+                            class="max-w-3xl mx-auto w-full flex items-center justify-center mt-4 py-6 px-4 sm:px-7 md:px-12 rounded-md text-gray-800 bg-gray-100">
                             <div>
-                                <svg fill="none" class="w-10 h-10 mx-auto text-brand" viewBox="0 0 96 96">
+                                <svg fill="none" class="w-10 h-10 mx-auto text-gray-800" viewBox="0 0 96 96">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                           stroke-width="2"
                                           d="M36 28.024A18.05 18.05 0 0025.022 39m34.977-10.976A18.05 18.05 0 0170.975 39"/>

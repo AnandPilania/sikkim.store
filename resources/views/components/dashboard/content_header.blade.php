@@ -6,7 +6,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
         </button>
-        <div class="relative">
+        <div class="relative w-64">
             <button class="px-2 py-1 bg-gray-100 font-light text-sm rounded-md text-gray-800 focus:outline-none"
                     x-on:click="CreateMenu =! CreateMenu">
                 Create
@@ -17,7 +17,7 @@
                 </svg>
             </button>
             <div x-show="CreateMenu" x-on:click.away="CreateMenu = false"
-                 class="origin-bottom-left absolute bg-white drop-shadow w-max-content text-sm rounded-md mt-1 py-2 text-gray-700">
+                 class="origin-bottom-left absolute bg-white drop-shadow box-shadow w-max-content text-sm rounded-md mt-1 py-2 text-gray-700">
                 <a href="" class="block py-2 px-4">Action</a>
                 <a href="" class="block pb-2 px-4">Another Action</a>
                 <a href="" class="block pb-2 px-4">Something Else Action</a>
@@ -32,7 +32,7 @@
             <div class="relative">
                 <form action="">
                     <label>
-                        <input type="text" placeholder="Search..." class="bg-gray-100 text-sm py-1.5 pl-6 pr-8 rounded-full placeholder-gray-600 focus:outline-none text-gray-700">
+                        <input type="text" placeholder="Search..." class="bg-white text-sm py-1.5 pl-6 pr-8 rounded-full placeholder-gray-600 focus:outline-none text-gray-700">
                     </label>
                 </form>
                 <div class="absolute top-0 right-0 flex items-center h-full mr-3">
@@ -72,7 +72,7 @@
                  x-transition:leave-end="transform opacity-0 scale-95"
                  x-on:click.away="profileDropdown = false"
                  class="origin-top-right absolute right-0 mt-2 mr-3 w-40 rounded-md shadow-lg z-10">
-                <div class="py-1 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical"
+                <div class="py-1 rounded-md bg-white shadow box-shadow" role="menu" aria-orientation="vertical"
                      aria-labelledby="user-menu">
                     <a href="{{ route('store.home', $store->slug) }}" target="_blank" rel="noopener"
                        class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"

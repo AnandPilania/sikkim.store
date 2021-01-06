@@ -21,7 +21,7 @@ class Authenticate extends Middleware
                 return route('seller.login');
             }
 
-            if ($request->route()->named('store.*')) {
+            if ($request->route()->named('store.admin.*')) {
                 return route('seller.login');
             }
 

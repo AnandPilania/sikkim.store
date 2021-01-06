@@ -61,14 +61,14 @@
             </div>
             <div class="flex items-center space-x-4 flex-none">
                 @auth('user')
-                    <div class="flex items-center">
+                    <a href="{{ route('store.cart.index', $store) }}" class="flex items-center">
                         <svg class="w-4 h-4 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
                              viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
                         </svg>
-                        <p class="text-xs capitalize font-medium tabular-nums">₹ 1245.00</p>
-                    </div>
+                        <p class="text-xs capitalize font-medium tabular-nums">{{ request()->cart->total_products }}</p>
+                    </a>
 
                     <a href=""
                        class="relative flex items-center justify-center mx-3 focus:outline-none  transition duration-150 ease-in-out">
@@ -296,7 +296,7 @@
                         <div class="flex-1 flex flex-col h-auto">
                             <p class="text-xs font-semibold tracking-wide text-gray-400 uppercase mb-2">{{ $product->category->name }}</p>
 
-                            <p class="tracking-tighter text-sm truncate-2-lines mb-2 md:mb-4 text-gray-600">{{ $product->name }}</p>
+                            <p class="tracking-tighter text-sm truncate-2-lines mb-2 md:mb-4 text-gray-600 capitalize">{{ $product->name }}</p>
 
                             <div class="flex-1 flex flex-col justify-end">
                                 <div class="flex items-center justify-between">
@@ -304,7 +304,7 @@
                                         <p class="font-sans tabular-nums uppercase text-sm font-bold text-gray-700 mr-2">{{ $product->price }}</p>
                                         <p class="hidden md:block text-xs text-gray-400 tabular-nums line-through">{{ $product->original_price }}</p>
                                     </div>
-                                    <button
+                                    <a href="{{ route('store.cart.store', [$store, $product]) }}"
                                         class="bg-yellow-300 text-xs px-4 py-1.5 rounded-full inline-flex items-center shadow">
                                         <svg class="w-4 h-4 mr-0.5 text-gray-800" xmlns="http://www.w3.org/2000/svg"
                                              fill="currentColor" viewBox="0 0 24 24">
@@ -312,7 +312,7 @@
                                                 d="M10.975 8L11 7.5c0-.517-.067-1.018-.181-1.5h5.993l-.564 2h-5.273zM8.5 18c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zM19.805 3l-3.432 12H5.945l-.455-1.083c-.323.049-.653.083-.99.083-.407 0-.805-.042-1.191-.114L4.615 17h13.239l3.474-12h1.929L24 3h-4.195zM13.5 18c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zM9 7.5C9 9.985 6.982 12 4.5 12 2.016 12 0 9.985 0 7.5S2.016 3 4.5 3C6.982 3 9 5.015 9 7.5zM7 7H5V5H4v2H2v1h2v2h1V8h2V7z"/>
                                         </svg>
                                         <span>Add</span>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

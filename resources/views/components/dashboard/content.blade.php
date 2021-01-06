@@ -17,7 +17,6 @@
                 </div>
                 {{ $action ?? null }}
             </div>
-
             {{ $slot }}
         </div>
     </div>

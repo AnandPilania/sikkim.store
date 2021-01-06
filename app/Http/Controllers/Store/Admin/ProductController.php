@@ -15,13 +15,15 @@ class ProductController extends Controller
     {
         return view('store.admin.products.index', [
             'store' => $store,
-            'products' => $store->products()->latest()->paginate(8),
+            'products' => $store->products()->latest()->paginate(40),
         ]);
     }
 
-    public function create(): View
+    public function create(Store $store): View
     {
-        //
+        return view('store.admin.products.create', [
+            'store' => $store,
+        ]);
     }
 
     public function store(Request $request): RedirectResponse
@@ -34,9 +36,12 @@ class ProductController extends Controller
         return $product;
     }
 
-    public function edit(Product $product): View
+    public function edit(Store $store, Product $product): View
     {
-        //
+        return view('store.admin.products.edit', [
+            'store' => $store,
+            'product' => $product
+        ]);
     }
 
     public function update(Request $request, Product $product): RedirectResponse

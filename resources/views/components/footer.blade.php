@@ -19,7 +19,7 @@
                     <div class="hidden md:flex justify-between w-full p-2 bg-white shadow-sm rounded-xl overflow-hidden mx-auto focus-within:ring-2 focus-within:ring-blue-600">
                         <label for="newsletterEmail" hidden></label>
                         <input id="newsletterEmail" type="text" class="border-none focus:outline-none focus:ring-0" placeholder="johndoe@mail.com" />
-                        <button type="button" class="flex-end bg-blue-600 hover:bg-blue-700 transform hover:scale-105 hover:-translate-x-1 transition-all text-white font-semibold text-base px-8 py-2 outline-none rounded-xl text-center uppercase"> JOIN </button>
+                        <button type="button" class="bg-blue-600 hover:bg-blue-700 transform hover:scale-105 hover:-translate-x-1 transition-all text-white font-semibold text-base px-8 py-2 outline-none rounded-xl text-center uppercase"> JOIN </button>
                     </div>
 
                     @error('email')

@@ -63,6 +63,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'unverified.email' => \App\Http\Middleware\MustHaveUnverifiedEmail::class,
-        'store.owner' => \App\Http\Middleware\MustBeStoreOwner::class
+        'store.owner' => \App\Http\Middleware\MustBeStoreOwner::class,
+        'cart.make' => \App\Http\Middleware\FindOrCreateCart::class,
     ];
 }

@@ -1,7 +1,7 @@
-<section class="mt-16 bg-cool-gray-200">
-    <div class="max-w-7xl mx-auto px-8 sm:px-6 lg:px-8 py-10 flex items-start justify-between space-x-6">
+<section class="pt-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex items-start justify-between space-x-6">
         <div class="sidebar w-80">
-            <div class="bg-white shadow-md py-2.5 px-3 flex items-center justify-start space-x-4 mb-4 h-18">
+            <div class="bg-white shadow rounded-md py-2.5 px-3 flex items-center justify-start space-x-4 mb-4 h-16">
                 <img
                     src="{{ auth('user')->user()->avatar }}"
                     alt=""
@@ -12,14 +12,14 @@
                 </div>
             </div>
 
-            <div class="bg-white shadow-md py-3">
+            <div class="bg-white shadow rounded-md py-3">
                 <div class="px-6 mb-2 mt-2">
                     <div class="text-xs text-gray-700 font-light">
                         <p class="">Account Settings</p>
                     </div>
                 </div>
                 <a href="{{ route('user.profile') }}"
-                   class="block w-full px-6 py-3 text-small @if(request()->routeIs('user.profile')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
+                   class="block w-full px-6 py-3 text-sm @if(request()->routeIs('user.profile')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
                             class="w-4 h-4 @if(request()->routeIs('user.profile')) text-white @else  text-gray-800 @endif group-hover:text-gray-100 "
@@ -33,7 +33,7 @@
                     </div>
                 </a>
                 <a href="{{ route('user.addresses') }}"
-                   class="block w-full px-6 py-3 text-small @if(request()->routeIs('user.addresses')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
+                   class="block w-full px-6 py-3 text-sm @if(request()->routeIs('user.addresses')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
                             class="w-4 h-4 @if(request()->routeIs('user.addresses')) text-white @else  text-gray-800 @endif group-hover:text-gray-100 "
@@ -48,14 +48,14 @@
                     </div>
                 </a>
 
-                <div class="px-6 mb-2 mt-3">
+                <div class="px-6 mb-2 mt-6">
                     <div class="text-xs text-gray-700 font-light">
                         <p class="">Orders</p>
                     </div>
                 </div>
 
                 <a href="{{ route('user.orders.current') }}"
-                   class="block w-full px-6 py-3 text-small @if(request()->routeIs('user.orders.current')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
+                   class="block w-full px-6 py-3 text-sm @if(request()->routeIs('user.orders.current')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
                             class="w-4 h-4 @if(request()->routeIs('user.orders.current')) text-white @else  text-gray-800 @endif group-hover:text-gray-100 "
@@ -71,7 +71,7 @@
                 </a>
 
                 <a href="{{ route('user.orders.completed') }}"
-                   class="block w-full px-6 py-3 text-small @if(request()->routeIs('user.orders.completed')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
+                   class="block w-full px-6 py-3 text-sm @if(request()->routeIs('user.orders.completed')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
                             class="w-4 h-4 @if(request()->routeIs('user.orders.completed')) text-white @else  text-gray-800 @endif group-hover:text-gray-100 "
@@ -87,7 +87,7 @@
                     </div>
                 </a>
                 <a href="{{ route('user.orders.cancelled') }}"
-                   class="block w-full px-6 py-3 text-small @if(request()->routeIs('user.orders.cancelled')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
+                   class="block w-full px-6 py-3 text-sm @if(request()->routeIs('user.orders.cancelled')) bg-gray-800 @else group hover:bg-gray-700 @endif transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
                             class="w-4 h-4 @if(request()->routeIs('user.orders.cancelled')) text-white @else  text-gray-800 @endif group-hover:text-gray-100 " viewBox="0 0 20 20"
@@ -101,14 +101,14 @@
                     </div>
                 </a>
 
-                <div class="px-6 mb-2 mt-3">
+                <div class="px-6 mb-2 mt-6">
                     <div class="text-xs text-gray-700 font-light">
                         <p class="">Notifications</p>
                     </div>
                 </div>
 
                 <a href="{{ route('user.notifications.unread') }}"
-                   class="block w-full px-6 py-3 text-small  group hover:bg-gray-700 transition ease-in-out duration-200">
+                   class="block w-full px-6 py-3 text-sm  group hover:bg-gray-700 transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
                             class="w-4 h-4 text-gray-800 group-hover:text-gray-100 " viewBox="0 0 20 20"
@@ -121,7 +121,7 @@
                     </div>
                 </a>
                 <a href="{{ route('user.notifications.all') }}"
-                   class="block w-full px-6 py-3 text-small  group hover:bg-gray-700 transition ease-in-out duration-200">
+                   class="block w-full px-6 py-3 text-sm  group hover:bg-gray-700 transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
                             class="w-4 h-4 text-gray-800 group-hover:text-gray-100" fill="none" viewBox="0 0 24 24"
@@ -134,14 +134,14 @@
                     </div>
                 </a>
 
-                <div class="px-6 mb-2 mt-3">
+                <div class="px-6 mb-2 mt-6">
                     <div class="text-xs text-gray-700 font-light">
                         <p class="">Payments</p>
                     </div>
                 </div>
 
                 <a href="{{ route('user.payments.gift_cards') }}"
-                   class="block w-full px-6 py-3 text-small  group hover:bg-gray-700 transition ease-in-out duration-200">
+                   class="block w-full px-6 py-3 text-sm  group hover:bg-gray-700 transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
                             class="w-4 h-4 text-gray-800 group-hover:text-gray-100 " viewBox="0 0 20 20"
@@ -156,7 +156,7 @@
                     </div>
                 </a>
                 <a href=""
-                   class="block w-full px-6 py-3 text-small  group hover:bg-gray-700 transition ease-in-out duration-200">
+                   class="block w-full px-6 py-3 text-sm  group hover:bg-gray-700 transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
                             class="w-4 h-4 text-gray-800 group-hover:text-gray-100 " viewBox="0 0 20 20"
@@ -171,7 +171,7 @@
                     </div>
                 </a>
                 <a href=""
-                   class="block w-full px-6 py-3 text-small  group hover:bg-gray-700 transition ease-in-out duration-200">
+                   class="block w-full px-6 py-3 text-sm  group hover:bg-gray-700 transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
                             class="w-4 h-4 text-gray-800 group-hover:text-gray-100 " viewBox="0 0 20 20"
@@ -186,14 +186,14 @@
                 </a>
 
 
-                <div class="px-6 mb-2 mt-3">
+                <div class="px-6 mb-2 mt-6">
                     <div class="text-xs text-gray-700 font-light">
                         <p class="">My Stuffs</p>
                     </div>
                 </div>
 
                 <a href=""
-                   class="block w-full px-6 py-3 text-small  group hover:bg-gray-700 transition ease-in-out duration-200">
+                   class="block w-full px-6 py-3 text-sm  group hover:bg-gray-700 transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
                             class="w-4 h-4 text-gray-800 group-hover:text-gray-100 " viewBox="0 0 20 20"
@@ -207,7 +207,7 @@
                     </div>
                 </a>
                 <a href=""
-                   class="block w-full px-6 py-3 text-small  group hover:bg-gray-700 transition ease-in-out duration-200">
+                   class="block w-full px-6 py-3 text-sm  group hover:bg-gray-700 transition ease-in-out duration-200">
                     <div class="flex items-center ml-2">
                         <svg
                             class="w-4 h-4 text-gray-800 group-hover:text-gray-100 " viewBox="0 0 20 20"
@@ -223,7 +223,7 @@
             </div>
         </div>
         <div class="content flex-1">
-            <div class="bg-white shadow-md py-2.5 px-8 h-18 mb-4 flex items-center text-gray-700 text-sm">
+            <div class="bg-white shadow rounded-md py-2.5 px-8 h-18 mb-4 flex items-center text-gray-700 text-sm h-16">
                 <svg class="w-5 mr-3 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                      fill="currentColor">
                     <path fill-rule="evenodd"
@@ -233,7 +233,7 @@
                 Important Notifications Here
             </div>
 
-            <div class="bg-white shadow-md p-8 text-gray-700">
+            <div class="bg-white shadow rounded-md p-8 text-gray-700">
                 {{ $slot }}
             </div>
         </div>

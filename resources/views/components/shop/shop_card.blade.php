@@ -6,7 +6,7 @@
         </div>
         <div class="flex-1 px-2">
             <p class="text-gray-800 group-hover:text-white text-base">{{ $store->name }}</p>
-            <p class="text-gray-500 group-hover:text-gray-300 text-xs">{{ $store->address }}</p>
+            <p class="text-gray-500 group-hover:text-gray-300 text-xs capitalize">{{ $store->city }}, {{ $store->state }}</p>
             @isset($rating)
                 <x-rating :rating="$rating" :reviewCount="$reviewCount ?? null"/>
             @endif

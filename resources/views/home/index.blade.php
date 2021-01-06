@@ -1,6 +1,4 @@
 <x-layout.home title="Home">
-    <x-header/>
-
     <section class="bg-no-repeat bg-auto md:bg-auto bg-top" style="background-image: url('{{ asset('assets/images/hero-bg.png') }}')">
         <div class="max-w-6xl mx-auto min-h-screen flex items-center justify-center lg:justify-between px-4 sm:px-6 lg:px-8">
 
@@ -9,7 +7,7 @@
                 <p data-aos="fade-right" data-aos-duration="800" class="text-5xl sm:text-6xl font-semibold bg-clip-text text-transparent bg-gradient-to-tr from-blue-600 to-green-600">Grow your business faster with us.</p>
                 <p data-aos="flip-up" data-aos-delay="200" data-aos-duration="700" class="mt-8 text-gray-600">Powerful, fast, secure, easy-to-use, multi-tenant e-commerce. Empowering local shops and sellers. Vocal for local.</p>
 
-                <a data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" a href="#register" class="block w-max mx-auto lg:mx-0 mt-8 px-12 py-3 bg-blue-700 hover:bg-blue-600 rounded-md text-sm font-semibold text-gray-100 hover:text-white focus:text-white transform hover:scale-105 transition ease-in-out duration-200">Register your business.</a>
+                <a data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" a href="{{ route('seller.register') }}" class="block w-max mx-auto lg:mx-0 mt-8 px-12 py-3 bg-blue-700 hover:bg-blue-600 rounded-md text-sm font-semibold text-gray-100 hover:text-white focus:text-white transform hover:scale-105 transition ease-in-out duration-200">Register your business.</a>
 
                 <p data-aos="zoom-in" data-aos-delay="500" class="text-xs text-gray-500 mt-1">Reserve your store name before someone takes it.</p>
                 <p data-aos="zoom-out" data-aos-delay="500" class="mt-8 text-xs font-medium text-gray-700">No credit card required.</p>

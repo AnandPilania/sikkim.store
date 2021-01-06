@@ -32,6 +32,10 @@ return [
 
     'domain' => [
         'base' => env('SITE_URL'),
-    ]
+    ],
+
+    'admin' => [
+        'email' => env('ADMIN_EMAIL', 'raynirola@gmail.com'),
+    ],
 
 ];

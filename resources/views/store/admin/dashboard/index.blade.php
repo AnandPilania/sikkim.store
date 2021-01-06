@@ -1,11 +1,11 @@
-<x-layout.store title="Sikkim Store's Dashboard">
+<x-layout.store title="{{$store->name}}'s Dashboard">
     <section>
-        <div class="w-screen bg-cool-gray-200">
+        <div class="w-screen bg-white">
             <div class="flex">
                 <x-dashboard-side-bar :store="$store"/>
                 <x-dashboard.content :store="$store" name="Dashboard">
                     <div class="mb-8">
-                        <div class="grid grid-cols-4 gap-8">
+                        <div class="grid grid-cols-2 lg:grid-cols-3 xxl:grid-cols-4 gap-4">
                             <x-dashboard.overview_card name="Orders" number="34,000" percentage="12.89" time="From previous period" trend="minus">
                                 <svg class="text-gray-300 w-8" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"/><path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"/>

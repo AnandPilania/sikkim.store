@@ -1,9 +1,9 @@
-<div class="flex" x-data="{SortMenu : false}">
-    <div class="relative inline-block text-left">
-        <div>
+<div class="flex w-full md:w-64" x-data="{SortMenu : false}">
+    <div class="flex-1 relative flex text-left">
+        <div class="w-full">
             <div class="rounded-md shadow-sm flex">
                 <button type="button" x-on:click="SortMenu =! SortMenu"
-                        class="w-max-content inline-flex justify-center items-center rounded-md rounded-r-none border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150"
+                        class="w-full flex items-center rounded-md rounded-r-none border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150"
                         id="options-menu" aria-haspopup="true" aria-expanded="true">
                     {{ $sortName }}
                     <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <div class="origin-top-right absolute right-0 mt-2 w-40 rounded-md drop-shadow z-10"
+        <div class="origin-top-right absolute right-0 top-full w-full rounded-md drop-shadow box-shadow z-10"
              x-show="SortMenu" x-on:click.away="SortMenu = false"
              x-transition:enter="transition ease-out transform duration-100"
              x-transition:enter-start="opacity-0 scale-90"
@@ -41,7 +41,7 @@
         </div>
     </div>
     <button type="button" id="sort-direction" aria-haspopup="true" aria-expanded="true" wire:click="direction()"
-            class="inline-flex justify-center items-center w-full rounded-md rounded-l-none border border-l-0 border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150">
+            class="w-max inline-flex justify-center items-center w-full rounded-md rounded-l-none border border-l-0 border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150">
         <svg class="w-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
             @isset($svg)
                 <path

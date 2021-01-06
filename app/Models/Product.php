@@ -12,7 +12,7 @@ class Product extends Model
 
     protected $guarded = [];
 
-    protected $appends = ['category_name'];
+    protected $appends = ['raw_original_price'];
 
     public function store(): BelongsTo
     {
@@ -24,17 +24,27 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function carts()
+    {
+        return $this->belongsToMany(Cart::class);
+    }
+
     public function getPriceAttribute()
     {
         return '₹ '.($this->attributes['price'] / 100);
     }
 
-    public function getOriginalPriceAttribute()
+    public function getOriginalPriceAttribute(): string
     {
         return '₹ '.(($this->attributes['price']/ 100) + 20);
     }
 
-    public function getRouteKeyName()
+    public function getRawOriginalPriceAttribute()
+    {
+        return $this->attributes['price'] / 100;
+    }
+
+    public function getRouteKeyName(): string
     {
         return 'slug';
     }

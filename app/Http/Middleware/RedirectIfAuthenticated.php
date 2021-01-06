@@ -20,12 +20,9 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
 
-            if ($guard == "store") {
-                return redirect()->route('store.admin.dashboard', Auth::guard('store')->user()->slug);
-            } else {
-                return redirect()->route('user.home');
-            }
-
+            return $guard === "store"
+                ? redirect()->route('store.admin.dashboard', Auth::guard('store')->user())
+                : redirect()->route('seller.login');
         }
 
         return $next($request);
