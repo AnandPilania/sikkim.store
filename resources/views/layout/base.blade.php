@@ -6,10 +6,10 @@
         <title>@yield('title') {{ $title }} - {{ config('app.name') }}</title>
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="{{ url(asset('favicon.ico')) }}">
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ url(mix('css/app.css')) }}">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @livewireStyles
 
 
@@ -22,7 +22,7 @@
         {{ $slot }}
 
         <!-- Scripts -->
-        <script src="{{ url(mix('js/app.js')) }}" defer></script>
+        <script src="{{ mix('js/app.js') }}" defer></script>
         @livewireScripts
         {{ $script }}
     </body>
