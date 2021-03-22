@@ -11,7 +11,6 @@ use App\Http\Controllers\User\Auth\LogoutController;
 use App\Http\Controllers\User\Auth\EmailVerificationController;
 
 Route::domain(config('services.domain.base'))->group(function () {
-    // User Auth
     Route::middleware(['guest:user'])->group(function () {
         Route::get('login', Login::class)->name('login');
         Route::get('register', Register::class)->name('register');

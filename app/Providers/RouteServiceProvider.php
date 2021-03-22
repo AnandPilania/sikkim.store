@@ -10,31 +10,10 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 
 class RouteServiceProvider extends ServiceProvider
 {
-    /**
-     * The path to the "home" route for your application.
-     *
-     * This is used by Laravel authentication to redirect users after login.
-     *
-     * @var string
-     */
     public const HOME = '/';
     public const PROFILE = '/user/{user}/profile';
     public const SHOP = '/{store}';
 
-    /**
-     * The controller namespace for the application.
-     *
-     * When present, controller route declarations will automatically be prefixed with this namespace.
-     *
-     * @var string|null
-     */
-    // protected $namespace = 'App\\Http\\Controllers';
-
-    /**
-     * Define your route model bindings, pattern filters, etc.
-     *
-     * @return void
-     */
     public function boot()
     {
         $this->configureRateLimiting();
@@ -46,20 +25,36 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/api.php'));
 
             Route::middleware('web')
-                ->namespace($this->namespace)
-                ->group(base_path('routes/auth.php'));
+                ->domain(config('services.domain.base'))
+                ->group(base_path('routes/web.php'));
 
             Route::middleware('web')
-                ->namespace($this->namespace)
-                ->group(base_path('routes/web.php'));
+                ->domain('seller.' . config('services.domain.base'))
+                ->name('seller.')
+                ->group(base_path('routes/seller_auth.php'));
+
+            Route::middleware('web')
+                ->group(base_path('routes/auth.php'));
+
+            Route::middleware(['web', 'auth:user', 'verified'])
+                ->domain(config('services.domain.base'))
+                ->prefix('user')
+                ->name('user.')
+                ->group(base_path('routes/user.php'));
+
+            Route::middleware(['web', 'cart.make'])
+                ->domain('{store}.' . config('services.domain.base'))
+                ->name('store.')
+                ->group(base_path('routes/store.php'));
+
+            Route::middleware(['web', 'auth:store', 'store.owner'])
+                ->domain('{store}.' . config('services.domain.base'))
+                ->prefix('admin')
+                ->name('store.admin.')
+                ->group(base_path('routes/store_admin.php'));
         });
     }
 
-    /**
-     * Configure the rate limiters for the application.
-     *
-     * @return void
-     */
     protected function configureRateLimiting()
     {
         RateLimiter::for('api', function (Request $request) {

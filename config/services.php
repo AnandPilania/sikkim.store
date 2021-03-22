@@ -31,11 +31,11 @@ return [
     ],
 
     'domain' => [
-        'base' => env('SITE_URL'),
+        'base' => env('BASE_URL'),
     ],
 
     'admin' => [
-        'email' => env('ADMIN_EMAIL', 'raynirola@gmail.com'),
+        'email' => env('ADMIN_EMAIL'),
     ],
 
 ];
