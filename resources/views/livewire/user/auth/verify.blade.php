@@ -6,14 +6,14 @@
                 <h2 class="text-sm font-semibold text-center text-gray-900 leading-9">
                     Verify your email address
                 </h2>
-                <div class="mt-2 text-sm text-center text-gray-600 leading-5 max-w">
+                <div class="inline-flex mt-2 text-sm text-center text-gray-600 leading-5 max-w">
                     Or
-                    <button type="button" onclick="document.getElementById('logout-form').submit();"
-                       class="font-medium text-green-600 hover:text-green-500 focus:outline-none focus:underline transition ease-in-out duration-150">
-                        sign out
-                    </button>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    <form action="{{ route('logout') }}" method="POST">
                         @csrf
+                        <button type="submit"
+                                class="ml-2 font-medium text-green-600 hover:text-green-500 focus:outline-none focus:underline transition ease-in-out duration-150">
+                            sign out
+                        </button>
                     </form>
                 </div>
             </div>
