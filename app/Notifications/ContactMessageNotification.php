@@ -30,8 +30,8 @@ class ContactMessageNotification extends Notification implements ShouldQueue
             ->line('You have a new contact message')
             ->line("From: " . $this->data['name'])
             ->line("Email: " . $this->data['email'])
-            ->line('Message:')
             ->line("Time: " . now()->format('d M, Y \a\t h:i A'))
+            ->line('Message:')
             ->line('"' . $this->data['message'] . '"');
     }
 }
