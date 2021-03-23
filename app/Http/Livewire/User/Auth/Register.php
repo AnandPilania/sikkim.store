@@ -3,21 +3,22 @@
 namespace App\Http\Livewire\User\Auth;
 
 use App\Models\User;
-use Illuminate\Http\RedirectResponse;
+use Livewire\Redirector;
 use Livewire\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Auth\Events\Registered;
 
 class Register extends Component
 {
-    public string $name = '';
-    public string $email = '';
-    public string $password = '';
-    public string $username = '';
-    public string $passwordConfirmation = '';
+    public ?string $name = '';
+    public ?string $email = '';
+    public ?string $password = '';
+    public ?string $username = '';
+    public ?string $passwordConfirmation = '';
 
-    public function register(): RedirectResponse
+    public function register(): Redirector|RedirectResponse
     {
         $this->validate();
 
