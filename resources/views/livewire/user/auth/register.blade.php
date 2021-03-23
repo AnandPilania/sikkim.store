@@ -3,6 +3,13 @@
         <div class="px-4 py-8 bg-white md:shadow sm:rounded-lg sm:px-10">
 
             <div class="mb-5 flex flex-col items-center justify-center">
+                <a href="{{ route('home') }}" class="bg-gray-200 h-10 w-10 flex items-center justify-center rounded-full">
+                    <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                </a>
                 <h2 class="text-sm font-semibold text-center text-gray-900 leading-9">
                     Create a new account
                 </h2>
@@ -20,6 +27,21 @@
                     </div>
 
                     @error('name')
+                    <p class="mt-2 text-xs text-red-600">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div class="mt-6">
+                    <label for="username" class="block text-sm font-medium text-gray-700 leading-5">
+                        Username
+                    </label>
+
+                    <div class="mt-1 rounded-md shadow-sm">
+                        <input wire:model.defer="username" id="username" type="text" required
+                               class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:shadow-outline-red @enderror"/>
+                    </div>
+
+                    @error('username')
                     <p class="mt-2 text-xs text-red-600">{{ $message }}</p>
                     @enderror
                 </div>

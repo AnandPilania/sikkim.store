@@ -1,7 +1,5 @@
 <div>
     <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-    <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-400 md:shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-    <div class="relative px-4 py-10 bg-white md:shadow-lg sm:rounded-3xl sm:p-20">
         <div class="sm:mx-auto sm:w-full sm:max-w-md">
             <div class="px-4 py-8 bg-white md:shadow-md sm:rounded-lg sm:px-10">
 
@@ -58,7 +56,8 @@
                         </div>
 
                         <div class="mt-6">
-                            <label for="password_confirmation" class="block text-sm font-medium text-gray-700 leading-5">
+                            <label for="password_confirmation"
+                                   class="block text-sm font-medium text-gray-700 leading-5">
                                 Confirm Password
                             </label>
 
@@ -78,7 +77,8 @@
                                 <div wire:loading wire:target="register"
                                      class="w-full px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md bg-green-500 cursor-wait ">
                                     <div class="flex items-center justify-center">
-                                        <svg class="animate-spin mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                                        <svg class="animate-spin mr-3 h-5 w-5 text-white" fill="none"
+                                             viewBox="0 0 24 24">
                                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="#ffffff"
                                                     stroke-width="3px" fill="none"></circle>
                                             <path class="opacity-75" fill="#ffffff"
@@ -100,7 +100,8 @@
                             </label>
 
                             <div class="mt-1 rounded-md shadow-sm">
-                                <input wire:model.lazy="invitationCode" id="invitationCode" type="text" required autofocus
+                                <input wire:model.lazy="invitationCode" id="invitationCode" type="text" required
+                                       autofocus
                                        class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 @error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:shadow-outline-red @enderror"/>
                             </div>
 
@@ -125,17 +126,16 @@
                         </div>
 
                         <div class="mt-6">
-                    <span class="block w-full rounded-md shadow-sm">
-                        <button type="submit"
-                                class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-md hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out">
-                            Verify Invitation Code
-                        </button>
-                    </span>
+                            <div class="block w-full rounded-md shadow-sm">
+                                <button type="submit"
+                                        class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-md hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out">
+                                    Verify Invitation Code
+                                </button>
+                            </div>
                         </div>
                     </form>
                 @endif
             </div>
         </div>
     </div>
-</div>
 </div>

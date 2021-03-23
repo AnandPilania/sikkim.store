@@ -12,12 +12,12 @@ use Illuminate\Contracts\Support\Renderable;
 
 class Register extends Component
 {
-    public string $name = '';
-    public string $email = '';
-    public string $password = '';
-    public string $slug = '';
-    public string $passwordConfirmation = '';
-    public string $invitationCode = '';
+    public ?string $name = '';
+    public ?string $email = '';
+    public ?string $password = '';
+    public ?string $slug = '';
+    public ?string $passwordConfirmation = '';
+    public ?string $invitationCode = '';
     public bool $invitationVerified = false;
 
     public function verifyInvitation()

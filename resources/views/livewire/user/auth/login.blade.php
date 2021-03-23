@@ -3,6 +3,13 @@
         <div class="px-4 py-8 bg-white md:shadow sm:rounded-lg sm:px-10">
 
             <div class="mb-5 flex flex-col items-center justify-center">
+                <a href="{{ route('home') }}" class="bg-gray-200 h-10 w-10 flex items-center justify-center rounded-full">
+                    <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                </a>
                 <h2 class="text-sm font-semibold text-center text-gray-900 leading-9">
                     Sign in to your account.
                 </h2>
@@ -35,7 +42,7 @@
                     </label>
 
                     <div class="mt-1 rounded-md shadow-sm">
-                        <input wire:model.defer="email" id="email" name="email" type="email" required autofocus
+                        <input wire:model.defer="email" id="email" name="email" type="email" required autofocus autocomplete="email"
                                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 @error('email') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:shadow-outline-red @enderror"/>
                     </div>
 
@@ -50,7 +57,7 @@
                     </label>
 
                     <div class="mt-1 rounded-md shadow-sm">
-                        <input wire:model.defer="password" id="password" type="password" required
+                        <input wire:model.defer="password" id="password" type="password" required autocomplete="recent_password"
                                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5 @error('password') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:shadow-outline-red @enderror"/>
                     </div>
 
@@ -62,7 +69,7 @@
                 <div class="flex items-center justify-between mt-6">
                     <div class="flex items-center">
                         <input wire:model.defer="remember" id="remember" type="checkbox"
-                               class="form-checkbox w-4 h-4 text-green-600 transition duration-150 ease-in-out"/>
+                               class="form-checkbox w-4 h-4 text-green-600 transition duration-150 ease-in-out rounded-md"/>
                         <label for="remember" class="block ml-2 text-sm text-gray-900 leading-5">
                             Remember
                         </label>
@@ -101,8 +108,11 @@
             </form>
             <div class="mt-6 text-center">
                 <a href="{{ route('register') }}"
-                   class="text-sm font-medium text-green-600 hover:text-green-500 focus:outline-none focus:underline transition ease-in-out duration-150">
-                    Or create an account.
+                   class="inline-flex items-center text-sm font-medium text-green-600 hover:text-green-500 focus:outline-none focus:underline transition ease-in-out duration-150">
+                    Or create an account
+                    <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
                 </a>
             </div>
         </div>

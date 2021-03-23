@@ -3,11 +3,11 @@
 namespace App\Http\Livewire\User\Auth;
 
 use App\Models\User;
+use Illuminate\Http\RedirectResponse;
 use Livewire\Component;
-use Illuminate\Support\Str;
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Contracts\Support\Renderable;
 
 class Register extends Component
 {
@@ -17,10 +17,8 @@ class Register extends Component
     public string $username = '';
     public string $passwordConfirmation = '';
 
-    public function register()
+    public function register(): RedirectResponse
     {
-        $this->username = Str::slug($this->name);
-
         $this->validate();
 
         $user = User::create([
@@ -43,7 +41,7 @@ class Register extends Component
             'name' => ['required'],
             'email' => ['required', 'email', 'unique:users,email'],
             'password' => ['required', 'min:8', 'same:passwordConfirmation'],
-            'username' => ['unique:users', 'required']
+            'username' => ['unique:users', 'required', 'alpha_dash']
         ];
     }
 
@@ -54,9 +52,10 @@ class Register extends Component
         ];
     }
 
-    public function render(): Renderable
+    public function render(): View
     {
-        return view('livewire.user.auth.register')->layout('layout.auth', ['title'=>'User Registration']);
+        return view('livewire.user.auth.register')
+            ->layout('layout.auth', ['title' => 'User Registration']);
     }
 
 }
