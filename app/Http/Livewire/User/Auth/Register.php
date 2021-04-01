@@ -48,7 +48,7 @@ class Register extends Component
     protected function getMessages(): array
     {
         return [
-            'email.unique' => 'Email already registered.'
+            'email.unique' => 'The email is not valid.'
         ];
     }
 
