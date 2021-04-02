@@ -36,7 +36,8 @@
                     </button>
                 </div>
 
-                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <div
+                    class="hidden absolute inset-y-0 right-0 md:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
                     @auth('user')
                         <a href=""
@@ -59,7 +60,7 @@
                                     @click="isOpen = !isOpen"
                                     @keydown.escape="isOpen = false">
                                     <img
-                                        class="h-8 w-8 rounded-full object-cover border border-gray-500 hover:border-indigo-800"
+                                        class="h-8 w-8 rounded-full object-cover"
                                         src="{{ auth('user')->user()->avatar }}"
                                         alt=""/>
                                 </button>
@@ -96,7 +97,7 @@
                     @endauth
 
                     @guest()
-                        <div class="hidden md:block">
+                        <div>
                             <a href="{{ route('login') }}"
                                class="btn btn-light transition ease-in-out duration-200 text-gray-600 px-4">Login</a>
                         </div>
@@ -134,24 +135,83 @@
                     </div>
                 </div>
                 <div class="w-11/12 h-0.5 bg-gray-100 rounded-full mx-auto mt-2"></div>
-                <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="{{ route('home') }}"
-                       class="block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition ease-in-out">Home</a>
 
-                    <a href="{{ route('shops') }}"
-                       class="block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition ease-in-out">Shops</a>
+                @auth('user')
+                    <div class="px-2 pt-4 pb-3">
+                        <div class="flex items-center px-3">
+                            <div v-if="$page.props.jetstream.managesProfilePhotos" class="flex-shrink-0 mr-3">
+                                <img class="h-10 w-10 rounded-full object-cover"
+                                     src="{{ auth('user')->user()->avatar }}" alt=""/>
+                            </div>
 
-                    <a href="{{ route('contact') }}"
-                       class="block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition ease-in-out">Contact</a>
+                            <div>
+                                <div class="text-sm font-semibold text-gray-800">{{ auth('user')->user()->name }}</div>
+                                <div class="font-normal text-sm text-gray-500">{{ auth('user')->user()->email }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pb-3 space-y-1">
+                        <div class="relative px-2 border-green-600">
+                            <a href="{{ route('user.profile') }}"
+                               class="block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 @if(request()->routeIs('user.profile')) bg-gray-100 @endif transition ease-in-out">My Profile</a>
 
-                    <a href=""
-                       class="block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition ease-in-out">FAQs</a>
+                            @if(request()->routeIs('user.profile'))
+                                <div class="absolute left-0 inset-y-0 w-1.5 bg-green-600 rounded-r-md"></div>
+                            @endif
+                        </div>
+                        <div class="relative px-2 border-green-600">
+                            <a href="#"
+                               class="block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition ease-in-out">Track Order</a>
+                        </div>
+
+                    </div>
+                    <div class="w-11/12 h-0.5 bg-gray-100 rounded-full mx-auto mt-2"></div>
+                @endauth
+                <div class="pt-2 pb-3 space-y-1">
+                    <div class="relative px-2 border-green-600">
+                        <a href="{{ route('home') }}"
+                           class="block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 @if(request()->routeIs('home')) bg-gray-100 @endif transition ease-in-out">Home</a>
+
+                        @if(request()->routeIs('home'))
+                            <div class="absolute left-0 inset-y-0 w-1.5 bg-green-600 rounded-r-md"></div>
+                        @endif
+                    </div>
+                    <div class="relative px-2 border-green-600">
+                        <a href="{{ route('shops') }}"
+                           class="block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 @if(request()->routeIs('shops')) bg-gray-100 @endif transition ease-in-out">Shops</a>
+
+                        @if(request()->routeIs('shops'))
+                            <div class="absolute left-0 inset-y-0 w-1.5 bg-green-600 rounded-r-md"></div>
+                        @endif
+                    </div>
+                    <div class="relative px-2 border-green-600">
+                        <a href="{{ route('contact') }}"
+                           class="block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 @if(request()->routeIs('contact')) bg-gray-100 @endif transition ease-in-out">Contact</a>
+
+                        @if(request()->routeIs('contact'))
+                            <div class="absolute left-0 inset-y-0 w-1.5 bg-green-600 rounded-r-md"></div>
+                        @endif
+                    </div>
+                    <div class="relative px-2 border-green-600">
+                        <a href=""
+                           class="block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition ease-in-out">FAQs</a>
+                    </div>
+
                 </div>
                 <div class="p-2">
-                    <a href="{{ route('login') }}"
-                       class="block w-full px-5 py-3 text-center font-medium text-green-600 bg-gray-100 hover:bg-gray-200 rounded-md transform btn-scale transition ease-in-out">
-                        Log in
-                    </a>
+                    @auth('user')
+                        <button type="submit" form="logoutForm"
+                                class="block w-full px-5 py-3 text-center font-medium text-green-600 bg-gray-100 hover:bg-gray-200 rounded-md transform btn-scale transition ease-in-out">
+                            Logout
+                        </button>
+
+                        <form id="logoutForm" action="{{ route('logout') }}" method="post" hidden>@csrf</form>
+                    @else
+                        <a href="{{ route('login') }}"
+                           class="block w-full px-5 py-3 text-center font-medium text-green-600 bg-gray-100 hover:bg-gray-200 rounded-md transform btn-scale transition ease-in-out">
+                            Login
+                        </a>
+                    @endauth
                 </div>
 
             </div>
