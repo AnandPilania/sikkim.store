@@ -1,9 +1,9 @@
 <x-layout.home title="Store Listings">
 
     <section class="bg-gray-50">
-        <div class="pt-16 md:pt-24"></div>
+        <div class="pt-12 md:pt-24"></div>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 md:pb-32">
-            <h1 class="mb-20 max-w-3xl text-4xl tracking-tight font-extrabold text-green-700 sm:text-5xl md:text-6xl">
+            <h1 class="mb-4 md:mb-20 max-w-3xl text-4xl tracking-tight font-extrabold text-green-700 sm:text-5xl md:text-6xl">
                 Get in touch
             </h1>
             <div class="flex sm:flex-nowrap flex-wrap">
