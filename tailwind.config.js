@@ -11,7 +11,15 @@ module.exports = {
                 'poppins': ['Poppins', 'sans-serif'],
             },
             colors: {
-                teal: colors.teal
+                teal: colors.teal,
+                lime: colors.lime,
+                cyan: colors.cyan,
+                rose: colors.rose,
+                amber: colors.amber,
+                fuchsia: colors.fuchsia,
+                emerald: colors.emerald,
+                orange: colors.orange,
+                'light-blue': colors.lightBlue,
             },
             spacing: {
                 '100': '25rem',

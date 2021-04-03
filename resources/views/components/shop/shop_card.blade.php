@@ -2,7 +2,7 @@
     <a href="{{ route('store.home', $store->slug) }}"
        class="p-2 relative bg-gradient-to-tr from-white to-white hover:from-blue-500 hover:to-green-500 group shadow-sm hover:shadow-2xl transform hover:-translate-y-0.5 rounded-md flex items-center justify-between transition ease-in-out duration-200">
         <div class="w-20 sm:w-3/12 h-full p-2 lg:p-4 border-r">
-            <img src="{{ $store->logo }}" class="w-full h-full" alt="">
+            <img loading="lazy" src="{{ $store->logo }}" class="w-full h-full" alt="{{ $store->name }}" width="100%" height="100%">
         </div>
         <div class="flex-1 px-2">
             <p class="text-gray-800 group-hover:text-white text-base">{{ $store->name }}</p>

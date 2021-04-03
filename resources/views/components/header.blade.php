@@ -7,8 +7,8 @@
 
                 <div class="flex-1 flex items-center md:space-x-14">
 
-                    <a href="{{ route('home') }}">
-                        <x-logo class="w-auto h-7"/>
+                    <a href="{{ route('home') }}" title="Go Home" aria-label="Go Home Page">
+                        <x-logo class="w-auto h-7" aria-label="Sikkim Store Label"/>
                     </a>
 
                     <div class="hidden sm:flex items-center space-x-12 text-sm text-gray-500">
@@ -18,7 +18,7 @@
                            class="hidden md:block hover:text-green-600 @if(request()->routeIs('shops')) text-green-700 font-medium @endif">Shops</a>
                         <a href="{{ route('contact') }}"
                            class="hidden md:block hover:text-green-600 @if(request()->routeIs('contact')) text-green-700 font-medium @endif">Contact</a>
-                        <a href="" class="hidden md:block hover:text-green-600">FAQs</a>
+                        <a href="#" class="hidden md:block hover:text-green-600">FAQs</a>
                     </div>
                 </div>
 
@@ -134,7 +134,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="w-11/12 h-0.5 bg-gray-100 rounded-full mx-auto mt-2"></div>
+                <div class="bg-gray-100 rounded-full mx-auto mt-2" style="height: 1px"></div>
 
                 @auth('user')
                     <div class="px-2 pt-4 pb-3">
@@ -165,7 +165,7 @@
                         </div>
 
                     </div>
-                    <div class="w-11/12 h-0.5 bg-gray-100 rounded-full mx-auto mt-2"></div>
+                    <div class="bg-gray-100 rounded-full mx-auto mt-2" style="height: 1px"></div>
                 @endauth
                 <div class="pt-2 pb-3 space-y-1">
                     <div class="relative px-2 border-green-600">
@@ -193,7 +193,7 @@
                         @endif
                     </div>
                     <div class="relative px-2 border-green-600">
-                        <a href=""
+                        <a href="#"
                            class="block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition ease-in-out">FAQs</a>
                     </div>
 

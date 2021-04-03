@@ -2,7 +2,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div class="grid grid-cols-1 md:grid-cols-2 md:gap-24 md:mb-10">
             <div class="flex flex-col md:flex-row">
-                <div class="flex-1 flex-col mb-10 md:mb-2">
+                <div class="flex-1 flex-col mb-4 md:mb-2">
                     <a href="{{ route('home') }}" aria-label="Home" class="inline-flex mb-3 md:mb-6">
                         <x-logo_dark class="h-6"/>
                     </a>
@@ -11,34 +11,34 @@
                         No commissions and no hidden charges.
                         Empowering local shops and sellers.
                     </p>
-                    <div class="text-xs text-gray-600 mb-1">Important Links</div>
+                    <div class="text-base font-normal tracking-wider uppercase text-gray-400 mb-3">Important Links</div>
                     <div
-                        class="flex flex-col lg:flex-row text-xs font-medium tracking-wide text-gray-300 lg:space-x-2 mb-8">
-                        <a href="" aria-label="Guides" class="hover:text-green-600 transition ease-in-out duration-150">Guides</a>
-                        <a href="" aria-label="Terms of Use"
+                        class="flex flex-col lg:flex-row text-xs font-medium tracking-wide text-gray-300 space-y-2 lg:space-y-0 lg:space-x-2 mb-8">
+                        <a href="#" aria-label="Guides" class="hover:text-green-600 transition ease-in-out duration-150">Guides</a>
+                        <a href="#" aria-label="Terms of Use"
                            class="hover:text-green-600 transition ease-in-out duration-150">Terms of Use</a>
-                        <a href="" aria-label="Privacy Policy"
+                        <a href="#" aria-label="Privacy Policy"
                            class="hover:text-green-600 transition ease-in-out duration-150">Privacy Policy</a>
                     </div>
                 </div>
 
                 <div class="flex flex-col md:ml-10 mb-10 md:mb-0">
                     <div
-                        class="font-bodyFont text-base font-normal tracking-wider uppercase text-gray-600 mb-3 md:mb-6">
+                        class="text-base font-normal tracking-wider uppercase text-gray-400 mb-3 md:mb-6">
                         Get Help
                     </div>
 
                     <div class="text-xs font-medium tracking-wide text-gray-300 flex space-y-2 mb-4 flex-col">
-                        <a href="" aria-label="Order Status"
+                        <a href="#" aria-label="Order Status"
                            class="w-max-content hover:text-green-600 transition ease-in-out duration-150">Order
                             Status</a>
-                        <a href="" aria-label="Shipping And Delivery"
+                        <a href="#" aria-label="Shipping And Delivery"
                            class="w-max-content hover:text-green-600 transition ease-in-out duration-150">Shipping &
                             Delivery</a>
-                        <a href="" aria-label="Payment Options"
+                        <a href="#" aria-label="Payment Options"
                            class="w-max-content hover:text-green-600 transition ease-in-out duration-150">Payment
                             Options</a>
-                        <a href="" aria-label="Contact Us"
+                        <a href="#" aria-label="Contact Us"
                            class="w-max-content hover:text-green-600 transition ease-in-out duration-150">Contact Us</a>
                     </div>
                 </div>
@@ -47,22 +47,22 @@
             <div class="flex flex-col md:flex-row">
                 <div class="flex flex-col md:ml-8 lg:ml-16 mb-10 md:mb-0">
                     <div
-                        class="font-bodyFont text-base font-normal tracking-wider uppercase text-gray-600 mb-3 md:mb-6">
+                        class="font-bodyFont text-base font-normal tracking-wider uppercase text-gray-400 mb-3 md:mb-6">
                         About Us
                     </div>
                     <div class="text-xs font-medium tracking-wide text-gray-300 flex space-y-2 mb-4 flex-col">
-                        <a href="" aria-label="Careers"
+                        <a href="#" aria-label="Careers"
                            class="hover:text-green-600 transition ease-in-out duration-150">Careers</a>
-                        <a href="" aria-label="Sustainability"
+                        <a href="#" aria-label="Sustainability"
                            class="hover:text-green-600 transition ease-in-out duration-150">Sustainability</a>
-                        <a href="" aria-label="Services"
+                        <a href="#" aria-label="Services"
                            class="hover:text-green-600 transition ease-in-out duration-150">Service</a>
-                        <a href="" class="hover:text-green-600 transition ease-in-out duration-150">Supply Chain</a>
+                        <a href="#" class="hover:text-green-600 transition ease-in-out duration-150">Supply Chain</a>
                     </div>
                 </div>
                 <div class="flex-1 flex-col mb-2 md:text-right">
                     <div
-                        class="font-bodyFont text-base font-normal tracking-wider uppercase text-gray-600 mb-3 md:mb-6">
+                        class="font-bodyFont text-base font-normal tracking-wider uppercase text-gray-400 mb-3 md:mb-6">
                         Get Social
                     </div>
                     <div
@@ -78,7 +78,7 @@
                         </a>
 
                         <a class="bg-gray-700 hover:bg-gray-200 p-1.5 rounded-md transition ease-in-out duration-200"
-                           href="" aria-label="Twitter" target="_blank" rel="noreferrer">
+                           href="#" aria-label="Twitter" target="_blank" rel="noreferrer">
                             <svg class="w-5 h-5 transform hover:scale-110 transition ease-in-out duration-150"
                                  fill="#1DA1F2" viewBox="0 0 24 24">
                                 <path
@@ -97,7 +97,7 @@
                         </a>
                     </div>
 
-                    <div class="text-xs text-gray-600">Payment Methods</div>
+                    <div class="text-xs text-gray-400">Payment Methods</div>
 
                     <div
                         class="text-xs font-medium tracking-normal text-gray-300 flex md:justify-end items-center space-x-2 mb-4">
