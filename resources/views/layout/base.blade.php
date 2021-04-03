@@ -7,7 +7,7 @@
         <meta name="description" content=" Sikkim's e-commerce store. Multi-vendor, Multi-tenant. No commissions and no hidden charges. Empowering local shops and sellers.">
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
