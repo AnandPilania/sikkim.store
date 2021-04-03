@@ -30,7 +30,7 @@ class Store extends Authenticatable
 
     public function getLogoAttribute()
     {
-        return url(asset('logos/' . $this->attributes['logo'] . '.png'));
+        return url(asset('assets/logos/' . $this->attributes['logo'] . '.png'));
     }
 
     public function products(): HasMany

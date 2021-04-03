@@ -17,10 +17,10 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, $guard = null): mixed
     {
-        if (!auth($guard)->check()) return $next($request);
-
-        if (!$guard === 'user') return redirect()->route('store.admin.dashboard', auth()->guard($guard)->user());
-
-        return redirect()->route('user.profile');
+        if (auth($guard)->check()) {
+            if ($guard === 'user') return redirect()->route('user.profile');
+            if ($guard === 'store') return redirect()->route('store.admin.dashboard', auth()->guard($guard)->user());
+        }
+        return $next($request);
     }
 }
