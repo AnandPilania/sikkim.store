@@ -7,6 +7,8 @@ use App\Http\Livewire\Store\Register;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Store\Admin\Auth\LogoutController;
 
+Route::redirect('/', '/login')->name('home');
+
 Route::middleware('guest:store')->group(function () {
     Route::get('login', Login::class)
         ->name('login');
