@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ $title ? 'Sikkim Store - '.$title : 'Sikkim Store' }}</title>
+        <title>{{ $title ?? 'Sikkim Store' }}</title>
         <meta name="description" content=" Sikkim's e-commerce store. Multi-vendor, Multi-tenant. No commissions and no hidden charges. Empowering local shops and sellers.">
 
         <!-- Icons -->

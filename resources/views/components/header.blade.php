@@ -14,8 +14,8 @@
                     <div class="hidden sm:flex items-center space-x-12 text-sm text-gray-500">
                         <a href="{{ route('home') }}"
                            class="hidden md:block hover:text-green-600 @if(request()->routeIs('home')) text-green-700 font-medium @endif">Home</a>
-                        <a href="{{ route('shops') }}"
-                           class="hidden md:block hover:text-green-600 @if(request()->routeIs('shops')) text-green-700 font-medium @endif">Shops</a>
+                        <a href="{{ route('shop.index') }}"
+                           class="hidden md:block hover:text-green-600 @if(request()->routeIs('shop.index')) text-green-700 font-medium @endif">Shops</a>
                         <a href="{{ route('contact') }}"
                            class="hidden md:block hover:text-green-600 @if(request()->routeIs('contact')) text-green-700 font-medium @endif">Contact</a>
                         <a href="#" class="hidden md:block hover:text-green-600">FAQs</a>
@@ -177,10 +177,10 @@
                         @endif
                     </div>
                     <div class="relative px-2 border-green-600">
-                        <a href="{{ route('shops') }}"
-                           class="block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 @if(request()->routeIs('shops')) bg-gray-100 @endif transition ease-in-out">Shops</a>
+                        <a href="{{ route('shop.index') }}"
+                           class="block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 @if(request()->routeIs('shop.index')) bg-gray-100 @endif transition ease-in-out">Shops</a>
 
-                        @if(request()->routeIs('shops'))
+                        @if(request()->routeIs('shop.index'))
                             <div class="absolute left-0 inset-y-0 w-1.5 bg-green-600 rounded-r-md"></div>
                         @endif
                     </div>

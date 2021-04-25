@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Store;
 use Illuminate\Contracts\View\View;
+use Inertia\Response;
 
 class HomeController extends Controller
 {
-    public function index(): View
+    public function index(): Response
     {
-        return view('home.index', [
+        return inertia('Home', [
             'featured_stores' => Store::query()->take(6)->get(),
         ]);
     }

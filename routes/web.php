@@ -9,7 +9,7 @@ Route::get('/', [HomeController::class, 'index'])
     ->name('home');
 
 Route::get('shops', [HomeController::class, 'shops'])
-    ->name('shops');
+    ->name('shop.index');
 
 Route::get('contact', ContactPageController::class)
     ->name('contact');
