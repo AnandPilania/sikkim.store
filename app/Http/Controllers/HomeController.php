@@ -15,12 +15,13 @@ class HomeController extends Controller
         ]);
     }
 
-    public function shops(): View
+    public function shops(): Response
     {
-        return view('home.shops', [
-            'featured_stores' => Store::query()->oldest()->take(6)->get(),
-            'latest_stores' => Store::query()->whereDate('created_at', '>', now()->subMonths(3))->latest()->take(6)->get(),
-            'top_performing_stores' => Store::query()->inRandomOrder()->take(6)->get(),
+        return inertia('Shop/Index', [
+            'featuredStores' => Store::query()->oldest()->take(6)->get(),
+            'latestStores' => Store::query()->whereDate('created_at', '>', now()->subMonths(3))->latest()->take(6)->get(),
+            'topPerformingStores' => Store::query()->inRandomOrder()->take(6)->get(),
+            'allStores' => Store::query()->orderBy('created_at')->paginate(12)
         ]);
     }
 
