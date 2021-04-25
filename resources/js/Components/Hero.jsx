@@ -16,7 +16,7 @@ const Hero = () => {
 
                 <p className="text-xs text-gray-500 mt-2">Reserve your store name before someone takes it.</p>
 
-                <div className="mt-6 md:mt-8" data-aos="zoom-in" data-aos-delay="500">
+                <div className="mt-6 md:mt-8">
                     <InertiaLink href={''} className="block w-full md:w-64 btn btn-success px-5 py-3 text-sm uppercase">
                         Register your business
                     </InertiaLink>
