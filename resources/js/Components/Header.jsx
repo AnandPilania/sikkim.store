@@ -24,15 +24,15 @@ const Header = () => {
                     <div className="relative flex items-center justify-between">
                         <div className="flex-1 flex items-center md:space-x-14">
 
-                            <a href={route('home')} title={'Go Home'} aria-label="Go Home Page">
+                            <InertiaLink href={route('home')} title={'Go Home'} aria-label="Go Home Page">
                                 <LightLogo className="w-auto h-7" aria-label="Sikkim Store Label"/>
-                            </a>
+                            </InertiaLink>
 
                             <div className="hidden sm:flex items-center space-x-12 text-sm text-gray-500">
                                 <InertiaLink href={route('home')}
                                    className={`hidden md:block hover:text-green-600 ${route().current('home') && 'text-green-700 font-medium'} `}>Home</InertiaLink>
-                                <a href={route('shop.index')}
-                                   className={`hidden md:block hover:text-green-600 ${route().current('shop.index') && 'text-green-700 font-medium'} `}>Shops</a>
+                                <InertiaLink href={route('shop.index')}
+                                   className={`hidden md:block hover:text-green-600 ${route().current('shop.index') && 'text-green-700 font-medium'} `}>Shops</InertiaLink>
                                 <a href={''}
                                    className={`hidden md:block hover:text-green-600 ${route().current('contact') && 'text-green-700 font-medium'} `}>Contact</a>
                                 <a href={'#'} className="hidden md:block hover:text-green-600">FAQs</a>

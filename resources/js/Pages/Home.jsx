@@ -16,8 +16,9 @@ import {
 
 import Hero from "@/Components/Hero";
 import Feature from "@/Components/Feature";
+import ShopCard from "@/Components/ShopCard";
 
-const Home = () => {
+const Home = ({featuredStores}) => {
     const {assetUrl} = usePage().props
     return (
         <HomeLayout>
@@ -104,7 +105,8 @@ const Home = () => {
                                     <p className="mt-2 text-sm text-gray-500">
                                         You don’t have to worry about scalability, or downtime ever.
                                         Our system runs on the latest technology and software stack that handles
-                                        scaling like a breeze. You just sell, let us worry about the techs, we are nerds.
+                                        scaling like a breeze. You just sell, let us worry about the techs, we are
+                                        nerds.
                                     </p>
                                 }
                             />
@@ -187,7 +189,7 @@ const Home = () => {
                     </div>
 
                     <div className="mt-6 md:mt-8">
-                        <InertiaLink href={ '' }
+                        <InertiaLink href={''}
                                      className="mx-auto block w-full md:w-64 px-5 py-3 btn btn-success text-sm uppercase">
                             Register Now.
                         </InertiaLink>
@@ -210,7 +212,7 @@ const Home = () => {
                         </p>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-
+                        {featuredStores.map(store => <ShopCard store={store}/>)}
                     </div>
                 </div>
             </section>
@@ -229,7 +231,8 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="order-2 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-                                <InertiaLink href={''} className="flex items-center justify-center px-4 py-3 border border-transparent rounded-md shadow-sm text-sm font-medium text-green-700 bg-gray-100 hover:bg-green-50 transform btn-scale transition ease-in-out">
+                                <InertiaLink href={''}
+                                             className="flex items-center justify-center px-4 py-3 border border-transparent rounded-md shadow-sm text-sm font-medium text-green-700 bg-gray-100 hover:bg-green-50 transform btn-scale transition ease-in-out">
                                     Support
                                 </InertiaLink>
                             </div>

@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index(): Response
     {
         return inertia('Home', [
-            'featured_stores' => Store::query()->take(6)->get(),
+            'featuredStores' => Store::query()->take(6)->get(),
         ]);
     }
 
