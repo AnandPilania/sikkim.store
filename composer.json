@@ -9,16 +9,18 @@
     "license": "MIT",
     "require": {
         "php": "^8.0",
+        "ext-gd": "*",
+        "ext-intl": "*",
+        "ext-json": "*",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "fzaninotto/faker": "^v1.9.1",
         "guzzlehttp/guzzle": "^7.1",
+        "inertiajs/inertia-laravel": "^0.4.1",
         "laravel/framework": "^v8.33",
         "laravel/tinker": "^2.0",
         "livewire/livewire": "^v2.2.9",
-        "ext-intl": "*",
-        "ext-gd": "*",
-        "ext-json": "*"
+        "tightenco/ziggy": "^1.1"
     },
     "require-dev": {
         "brianium/paratest": "^6.2",
