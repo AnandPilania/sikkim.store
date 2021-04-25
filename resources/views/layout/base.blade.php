@@ -17,17 +17,17 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="prefetch" as="style">
+        <link rel="prefetch" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     </head>
 
-    <body class="font-poppins antialiased">
+    <body class="font-sans antialiased">
 
         {{ $slot }}
 
         <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="{{ mix('js/main.js') }}" defer></script>
 
         @if(!request()->routeIs('home'))
             @livewireScripts

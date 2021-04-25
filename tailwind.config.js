@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
     purge: [
         './storage/framework/views/*.php',
@@ -13,7 +14,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                'poppins': ['Poppins', 'sans-serif'],
+                sans: ['Poppins', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 teal: colors.teal,

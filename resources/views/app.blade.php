@@ -14,17 +14,17 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="prefetch" as="style">
+        <link rel="prefetch" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
         <!-- Mix -->
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-        <script src="{{ mix('js/main.js') }}" defer></script>
+        <script src="{{ mix('js/app.js') }}" defer></script>
 
         <!-- Ziggy -->
         @routes
     </head>
-    <body class="antialiased">
+    <body class="antialiased font-sans">
         @inertia
     </body>
 </html>
