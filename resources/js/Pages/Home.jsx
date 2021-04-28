@@ -30,7 +30,8 @@ const Home = ({featuredStores}) => {
                     </div>
                 </div>
             </section>
-            <section className="py-24 bg-gradient-to-b from-white to-emerald-500 ">
+
+            <section className="py-24 bg-gray-50">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="lg:text-center">
                         <p className="text-base leading-6 bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-purple-600 font-semibold tracking-wide uppercase">
@@ -49,8 +50,7 @@ const Home = ({featuredStores}) => {
                     </div>
 
                     <div
-                        className="mt-20 md:mt-32 grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-12 sm:gap-x-8 md:gap-x-12 md:gap-y-16">
-                        <div>
+                        className="mt-20 md:mt-32 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 md:gap-10">
                             <Feature
                                 gradient={"from-cyan-400 to-light-blue-500"}
                                 icon={<CurrencyRupeeIcon className="h-5 w-5"/>}
@@ -63,8 +63,6 @@ const Home = ({featuredStores}) => {
                                     </p>
                                 }
                             />
-                        </div>
-                        <div>
                             <Feature
                                 gradient={"from-fuchsia-500 to-purple-600"}
                                 icon={<EyeOffIcon className="h-5 w-5"/>}
@@ -72,31 +70,27 @@ const Home = ({featuredStores}) => {
                                 description={
                                     <p className="mt-2 text-sm text-gray-500">
                                         Dont worry, we dont have
-                                        <span className="text-red-600 font-medium">T&C</span> or
-                                        <span className="text-red-600 font-medium">*</span>
-                                        next to our pricing. How much for all these? Just a minimal amount per
-                                        month.
+                                        <span className="mx-1 text-red-600 font-medium">T&C</span> or
+                                        <span className="mx-1 text-red-600 font-medium">*</span>
+                                        next to our pricing. How much for all these? Its
+                                        <span className="mx-1 text-green-700 font-medium">FREE.</span>
                                         All prices are upfront. No hidden charges, no hassle and headache.
                                     </p>
                                 }
                             />
-                        </div>
-                        <div>
                             <Feature
                                 gradient={"from-orange-400 to-pink-600"}
                                 icon={<GlobeAltIcon className="h-5 w-5"/>}
                                 title={"Free Custom Domain."}
                                 description={
                                     <p className="mt-2 text-sm text-gray-500">
-                                        You can can your own domain, e.g.
+                                        You can connect your own domain, e.g.
                                         <span className="text-indigo-600 font-medium">www.myownshop.com</span>.
                                         We will guide you through every step to set up your own personal domain and
                                         use our services.
                                     </p>
                                 }
                             />
-                        </div>
-                        <div>
                             <Feature
                                 gradient={"from-green-400 to-cyan-500"}
                                 icon={<TrendingUpIcon className="h-5 w-5"/>}
@@ -110,8 +104,6 @@ const Home = ({featuredStores}) => {
                                     </p>
                                 }
                             />
-                        </div>
-                        <div>
                             <Feature
                                 gradient={"from-purple-500 to-indigo-500"}
                                 icon={<PresentationChartLineIcon className="h-5 w-5"/>}
@@ -125,8 +117,6 @@ const Home = ({featuredStores}) => {
                                     </p>
                                 }
                             />
-                        </div>
-                        <div>
                             <Feature
                                 gradient={"from-yellow-400 to-orange-500"}
                                 icon={<CursorClickIcon className="h-5 w-5"/>}
@@ -139,8 +129,6 @@ const Home = ({featuredStores}) => {
                                     </p>
                                 }
                             />
-                        </div>
-                        <div>
                             <Feature
                                 gradient={"from-light-blue-400 to-indigo-500"}
                                 icon={<CreditCardIcon className="h-5 w-5"/>}
@@ -153,8 +141,6 @@ const Home = ({featuredStores}) => {
                                     </p>
                                 }
                             />
-                        </div>
-                        <div>
                             <Feature
                                 gradient={"from-pink-500 to-rose-500"}
                                 icon={<CheckCircleIcon className="h-5 w-5"/>}
@@ -167,7 +153,6 @@ const Home = ({featuredStores}) => {
                                     </p>
                                 }
                             />
-                        </div>
                     </div>
                 </div>
             </section>
@@ -212,7 +197,7 @@ const Home = ({featuredStores}) => {
                         </p>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {featuredStores.map(store => <ShopCard store={store}/>)}
+                        {featuredStores.map(store => <ShopCard key={store.id} store={store}/>)}
                     </div>
                 </div>
             </section>

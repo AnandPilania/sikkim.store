@@ -2,6 +2,8 @@ import {useState, useEffect} from 'react';
 import {InertiaLink, usePage} from "@inertiajs/inertia-react";
 
 import {Light as LightLogo} from "@/Components/Logo";
+import {MenuIcon, XIcon} from "@heroicons/react/outline";
+import {BellIcon} from "@heroicons/react/solid";
 
 const Header = () => {
     const {auth} = usePage().props
@@ -33,8 +35,6 @@ const Header = () => {
                                    className={`hidden md:block hover:text-green-600 ${route().current('home') && 'text-green-700 font-medium'} `}>Home</InertiaLink>
                                 <InertiaLink href={route('shop.index')}
                                    className={`hidden md:block hover:text-green-600 ${route().current('shop.index') && 'text-green-700 font-medium'} `}>Shops</InertiaLink>
-                                <a href={''}
-                                   className={`hidden md:block hover:text-green-600 ${route().current('contact') && 'text-green-700 font-medium'} `}>Contact</a>
                                 <a href={'#'} className="hidden md:block hover:text-green-600">FAQs</a>
                             </div>
                         </div>
@@ -45,12 +45,7 @@ const Header = () => {
                                     className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                                     aria-expanded="false">
                                 <span className="sr-only">Open main menu</span>
-                                <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                     viewBox="0 0 24 24"
-                                     stroke="currentColor" aria-hidden="true">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                          d="M4 6h16M4 12h16M4 18h16"/>
-                                </svg>
+                                <MenuIcon className="h-6 w-6" />
                             </button>
                         </div>
 
@@ -61,10 +56,7 @@ const Header = () => {
                                 <>
                                     <a href={''}
                                        className="text-gray-700 hover:text-green-500 focus:outline-none focus:text-green-500  transition duration-150 ease-in-out">
-                                        <svg className="w-5" viewBox="0 0 20 20" fill="currentColor">
-                                            <path
-                                                d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/>
-                                        </svg>
+                                        <BellIcon className="w-5" />
                                     </a>
                                     <div
                                         className="md:pl-4 md:py-2 text-sm font-medium tracking-tight text-gray-700 hidden md:block">
@@ -108,7 +100,7 @@ const Header = () => {
                                 </>
                                 :
                                 <div>
-                                    <a href={''}
+                                    <a href={route('seller.login')}
                                        className="btn btn-light transition ease-in-out duration-200 text-gray-600 px-4">Login</a>
                                 </div>
                             }
@@ -129,11 +121,7 @@ const Header = () => {
                                     <button onClick={() => setIsOpen(!isOpen)} type="button"
                                             className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                                         <span className="sr-only">Close main menu</span>
-                                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                             aria-hidden="true">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                                  d="M6 18L18 6M6 6l12 12"/>
-                                        </svg>
+                                        <XIcon className="h-6 w-6"/>
                                     </button>
                                 </div>
                             </div>
@@ -185,8 +173,8 @@ const Header = () => {
                             }
                             <div className="pt-2 pb-3 space-y-1">
                                 <div className="relative px-2 border-green-600">
-                                    <a href={route('home')}
-                                       className={`block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 ${route().current('home') && 'bg-gray-100'} transition ease-in-out`}>Home</a>
+                                    <InertiaLink href={route('home')}
+                                       className={`block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 ${route().current('home') && 'bg-gray-100'} transition ease-in-out`}>Home</InertiaLink>
 
                                     {
                                         route().current('home') &&
@@ -194,23 +182,13 @@ const Header = () => {
                                     }
                                 </div>
                                 <div className="relative px-2 border-green-600">
-                                    <a href={route('shop.index')}
-                                       className={`block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 ${route().current('shop.index') && 'bg-gray-100'} transition ease-in-out`}>Shops</a>
+                                    <InertiaLink href={route('shop.index')}
+                                       className={`block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 ${route().current('shop.index') && 'bg-gray-100'} transition ease-in-out`}>Shops</InertiaLink>
 
                                     {
                                         route().current('shop.index') &&
                                         <div className="absolute left-0 inset-y-0 w-1.5 bg-green-600 rounded-r-md"/>
                                     }
-                                </div>
-                                <div className="relative px-2 border-green-600">
-                                    <a href={''}
-                                       className={`block px-3 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 ${route().current('contact') && 'bg-gray-100'} transition ease-in-out`}>Contact</a>
-
-                                    {
-                                        route().current('contact') &&
-                                        <div className="absolute left-0 inset-y-0 w-1.5 bg-green-600 rounded-r-md"/>
-                                    }
-
                                 </div>
                                 <div className="relative px-2 border-green-600">
                                     <a href="#"

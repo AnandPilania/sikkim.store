@@ -21,6 +21,8 @@ class User extends Authenticatable implements MustVerifyEmail
 
     protected $casts = ['email_verified_at' => 'datetime'];
 
+    protected $appends = ['avatar'];
+
     public function getRouteKeyName(): string
     {
         return 'username';

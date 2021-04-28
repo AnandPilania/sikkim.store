@@ -20,10 +20,6 @@ const Footer = () => {
                                 Important Links
                             </div>
                             <div className="flex flex-col lg:flex-row text-xs font-medium tracking-wide text-gray-300 space-y-2 lg:space-y-0 lg:space-x-2 mb-8">
-                                <a href="#" aria-label="Guides"
-                                   className="hover:text-green-600 transition ease-in-out duration-150">
-                                    Guides
-                                </a>
                                 <a href="#" aria-label="Terms of Use"
                                    className="hover:text-green-600 transition ease-in-out duration-150">
                                     Terms of Use
@@ -31,6 +27,10 @@ const Footer = () => {
                                 <a href="#" aria-label="Privacy Policy"
                                    className="hover:text-green-600 transition ease-in-out duration-150">
                                     Privacy Policy
+                                </a>
+                                <a href="#" aria-label="Guides"
+                                   className="hover:text-green-600 transition ease-in-out duration-150">
+                                    FAQs
                                 </a>
                             </div>
                         </div>
@@ -44,18 +44,17 @@ const Footer = () => {
                             <div
                                 className="text-xs font-medium tracking-wide text-gray-300 flex space-y-2 mb-4 flex-col">
                                 <a href="#" aria-label="Order Status"
-                                   className="w-max-content hover:text-green-600 transition ease-in-out duration-150">Order
-                                    Status</a>
+                                   className="w-max-content hover:text-green-600 transition ease-in-out duration-150">
+                                    Blog</a>
                                 <a href="#" aria-label="Shipping And Delivery"
-                                   className="w-max-content hover:text-green-600 transition ease-in-out duration-150">Shipping
-                                    &
-                                    Delivery</a>
+                                   className="w-max-content hover:text-green-600 transition ease-in-out duration-150">
+                                    Help Center</a>
                                 <a href="#" aria-label="Payment Options"
-                                   className="w-max-content hover:text-green-600 transition ease-in-out duration-150">Payment
-                                    Options</a>
+                                   className="w-max-content hover:text-green-600 transition ease-in-out duration-150">
+                                    Banned Items</a>
                                 <a href="#" aria-label="Contact Us"
-                                   className="w-max-content hover:text-green-600 transition ease-in-out duration-150">Contact
-                                    Us</a>
+                                   className="w-max-content hover:text-green-600 transition ease-in-out duration-150">
+                                    Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -71,11 +70,10 @@ const Footer = () => {
                                 <a href="#" aria-label="Careers"
                                    className="hover:text-green-600 transition ease-in-out duration-150">Careers</a>
                                 <a href="#" aria-label="Sustainability"
-                                   className="hover:text-green-600 transition ease-in-out duration-150">Sustainability</a>
+                                   className="hover:text-green-600 transition ease-in-out duration-150">Media Kit</a>
                                 <a href="#" aria-label="Services"
-                                   className="hover:text-green-600 transition ease-in-out duration-150">Service</a>
-                                <a href="#" className="hover:text-green-600 transition ease-in-out duration-150">Supply
-                                    Chain</a>
+                                   className="hover:text-green-600 transition ease-in-out duration-150">Press Inquiry</a>
+                                <a href="#" className="hover:text-green-600 transition ease-in-out duration-150">Legal</a>
                             </div>
                         </div>
                         <div className="flex-1 flex-col mb-2 md:text-right">
@@ -145,7 +143,7 @@ const Footer = () => {
                 </div>
 
                 <div className="text-xs text-gray-400">
-                    <p> &copy; 2020 - 2021. All rights reserved. YES, everything. </p>
+                    <p>Atcore Tech (OPC) &copy; 2020 - 2021. All rights reserved.</p>
                 </div>
             </div>
         </footer>
