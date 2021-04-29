@@ -21,7 +21,7 @@ const Header = () => {
     return (
         <header className="fixed top-0 inset-x-0 z-10">
             <nav
-                className={`relative ${isScrollBarAtTop ? 'py-3 sm:py-4 md:py-6 bg-white md:bg-transparent' : 'bg-white shadow py-3 sm:py-3 md:py-4'}`}>
+                className={`relative py-3 sm:py-4 md:py-6 ${isScrollBarAtTop ? 'bg-white md:bg-transparent' : 'bg-white shadow'}`}>
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="relative flex items-center justify-between">
                         <div className="flex-1 flex items-center md:space-x-14">
@@ -112,7 +112,7 @@ const Header = () => {
                     isOpen &&
                     <div
                         className={`${isOpen ? 'block' : 'hidden'} absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden`}>
-                        <div className="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                        <div className="rounded-lg shadow-lg bg-white ring-1 ring-gray-500 ring-opacity-5 overflow-hidden">
                             <div className="px-5 pt-4 flex items-center justify-between">
                                 <div>
                                     <LightLogo className="h-5"/>
@@ -156,8 +156,7 @@ const Header = () => {
 
                                             {
                                                 route().current('user.profile') &&
-                                                <div
-                                                    className="absolute left-0 inset-y-0 w-1.5 bg-green-600 rounded-r-md"/>
+                                                <div className="absolute left-0 inset-y-0 w-1.5 bg-green-600 rounded-r-md"/>
                                             }
                                         </div>
                                         <div className="relative px-2 border-green-600">
@@ -198,18 +197,10 @@ const Header = () => {
                             </div>
                             <div className="p-2">
                                 {auth.user ?
-                                    <>
-                                        <button
-                                            type="submit"
-                                            form="logoutForm"
-                                            className="block w-full px-5 py-3 text-center font-medium text-green-600 bg-gray-100 hover:bg-gray-200 rounded-md transform btn-scale transition ease-in-out">
-                                            Logout
-                                        </button>
-
-                                        <form id="logoutForm" action={route('logout')} method="post"
-                                              hidden>@csrf
-                                        </form>
-                                    </>
+                                    <InertiaLink method={'post'} as={'button'} href={route('logout')}
+                                        className="block w-full px-5 py-3 text-center font-medium text-green-600 bg-gray-100 hover:bg-gray-200 rounded-md transform btn-scale transition ease-in-out">
+                                        Logout
+                                    </InertiaLink>
                                     :
                                     <a href={''}
                                        className="block w-full px-5 py-3 text-center font-medium text-green-600 bg-gray-100 hover:bg-gray-200 rounded-md transform btn-scale transition ease-in-out">

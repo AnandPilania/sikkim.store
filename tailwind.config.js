@@ -17,15 +17,7 @@ module.exports = {
                 sans: ['Poppins', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                teal: colors.teal,
-                lime: colors.lime,
-                cyan: colors.cyan,
-                rose: colors.rose,
-                amber: colors.amber,
-                fuchsia: colors.fuchsia,
-                emerald: colors.emerald,
-                orange: colors.orange,
-                'light-blue': colors.lightBlue,
+                ...colors,
             },
             spacing: {
                 '100': '25rem',

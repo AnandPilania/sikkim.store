@@ -1,7 +1,7 @@
 import React from 'react';
 
 import HomeLayout from "@/Layouts/HomeLayout";
-import {InertiaLink, usePage} from "@inertiajs/inertia-react";
+import {InertiaLink} from "@inertiajs/inertia-react";
 import {
     CheckCircleIcon,
     CreditCardIcon,
@@ -19,11 +19,10 @@ import Feature from "@/Components/Feature";
 import ShopCard from "@/Components/ShopCard";
 
 const Home = ({featuredStores}) => {
-    const {assetUrl} = usePage().props
     return (
         <HomeLayout>
             <section className="bg-no-repeat bg-auto md:bg-auto bg-top"
-                     style={{backgroundImage: `url("${assetUrl}/assets/images/hero-bg.png")`}}>
+                     style={{backgroundImage: `url("${config.asset('assets/images/hero-bg.png')}")`}}>
                 <div className="max-w-6xl mx-auto px-4 pb-8 sm:pb-0 sm:px-6 lg:px-8">
                     <div className="sm:min-h-screen flex items-center justify-center lg:justify-between">
                         <Hero/>
@@ -31,7 +30,7 @@ const Home = ({featuredStores}) => {
                 </div>
             </section>
 
-            <section className="py-24 bg-gray-50">
+            <section className="py-24 bg-blueGray-50 box-shadow">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="lg:text-center">
                         <p className="text-base leading-6 bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-purple-600 font-semibold tracking-wide uppercase">
@@ -52,7 +51,7 @@ const Home = ({featuredStores}) => {
                     <div
                         className="mt-20 md:mt-32 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 md:gap-10">
                             <Feature
-                                gradient={"from-cyan-400 to-light-blue-500"}
+                                gradient={"from-cyan-400 to-lightBlue-500"}
                                 icon={<CurrencyRupeeIcon className="h-5 w-5"/>}
                                 title={"What you sell is 100% yours."}
                                 description={
@@ -130,7 +129,7 @@ const Home = ({featuredStores}) => {
                                 }
                             />
                             <Feature
-                                gradient={"from-light-blue-400 to-indigo-500"}
+                                gradient={"from-lightBlue-400 to-indigo-500"}
                                 icon={<CreditCardIcon className="h-5 w-5"/>}
                                 title={"Payment Gateway."}
                                 description={

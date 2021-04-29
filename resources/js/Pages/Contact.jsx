@@ -1,13 +1,7 @@
 import HomeLayout from "@/Layouts/HomeLayout";
-import {useForm, usePage} from "@inertiajs/inertia-react";
-import {Spinner} from "@/CustomIcons";
-import {useEffect, useState} from "react";
-import {CheckCircleIcon, XIcon} from "@heroicons/react/outline";
 import ContactForm from "@/Components/ContactForm";
 
 const Contact = () => {
-    const {assetUrl} = usePage().props
-
     return (
         <HomeLayout>
             <section className="bg-gray-50">
@@ -27,7 +21,7 @@ const Contact = () => {
                         </div>
                         <div
                             className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:ml-10 p-10 flex items-end justify-start relative">
-                            <img src={`${assetUrl}/assets/map/location.png`}
+                            <img src={config.asset('assets/map/location.png')}
                                  className="absolute inset-0 object-cover filter grayscale contrast-125 opacity-60"
                                  width="100%" height="100%"
                                  alt={'Our location'}/>

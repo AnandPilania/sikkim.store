@@ -1,5 +1,5 @@
 import {useForm} from "@inertiajs/inertia-react";
-import {Spinner} from "@/CustomIcons";
+import {Spinner} from "@/Icons";
 import {CheckCircleIcon} from "@heroicons/react/outline";
 
 const ContactForm = () => {

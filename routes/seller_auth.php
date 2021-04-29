@@ -10,7 +10,7 @@ use App\Http\Controllers\Store\Admin\Auth\LogoutController;
 Route::redirect('/', '/login')->name('home');
 
 Route::middleware('guest:store')->group(function () {
-    Route::get('login', Login::class)
+    Route::get('login', [\App\Http\Controllers\Store\Admin\Auth\LoginController::class, 'index'])
         ->name('login');
 
     Route::get('register', Register::class)

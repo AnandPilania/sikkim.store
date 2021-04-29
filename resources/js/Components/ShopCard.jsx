@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ShopCard = ({store}) => {
     return (
         <a href={route('store.home', store.slug)}
